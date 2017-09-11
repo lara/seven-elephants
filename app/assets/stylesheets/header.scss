@@ -4,6 +4,21 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  height: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(210, 224, 255);
+
+  a {
+    text-decoration: none;
+  }
+
+  nav {
+    width: 400px;
+
+    button {
+      width: 100%;
+    }
+  }
 
   .header-logo {
     text-align: center;
@@ -18,4 +33,10 @@ header {
     display: flex;
     padding: 0;
   }
+
+  li {
+    flex: 1;
+  }
+
+
 }

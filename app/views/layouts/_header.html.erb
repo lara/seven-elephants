@@ -1,10 +1,23 @@
 <header>
-  <h3>search</h3>
+  <div class="search">
+      <input type="search" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+        <i class="search"></i>
+     </button>
+   </div>
   <%= link_to "Nazzar Bazaar", '#', class: "header-logo" %>
   <nav>
     <ul>
-      <li><%= link_to "My Favorites",   '#' %></li>
-      <li><%= link_to "My Cart",   '#' %></li>
+      <li>
+        <button type="button" name="header-button">
+          <%= link_to "My Favorites",   '#' %>
+        </button>
+      </li>
+      <li>
+        <button type="button" name="header-button">
+          <%= link_to "My Cart",   '#' %>
+        </button>
+      </li>
     </ul>
   </nav>
 </header>
