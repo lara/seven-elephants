@@ -25,39 +25,39 @@ class OrderDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = [
-    :order_products,
-    :products,
-    :id,
-    :email,
+  COLLECTION_ATTRIBUTES = %i[
+    order_products
+    products
+    id
+    email
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = [
-    :order_products,
-    :products,
-    :id,
-    :email,
-    :address,
-    :placed_at,
-    :shipped_at,
-    :cancelled_at,
-    :created_at,
-    :updated_at,
+  SHOW_PAGE_ATTRIBUTES = %i[
+    order_products
+    products
+    id
+    email
+    address
+    placed_at
+    shipped_at
+    cancelled_at
+    created_at
+    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :order_products,
-    :products,
-    :email,
-    :address,
-    :placed_at,
-    :shipped_at,
-    :cancelled_at,
+  FORM_ATTRIBUTES = %i[
+    order_products
+    products
+    email
+    address
+    placed_at
+    shipped_at
+    cancelled_at
   ].freeze
 
   # Overwrite this method to customize how orders are displayed

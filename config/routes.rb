@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :orders
-    resources :order_products
     resources :products
 
     root to: "orders#index"
@@ -9,5 +8,5 @@ Rails.application.routes.draw do
 
   root "products#index"
 
-  resources :products
+  resources :products, only: %i[index show]
 end
