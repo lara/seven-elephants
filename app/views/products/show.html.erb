@@ -1,6 +1,6 @@
 <h1><%= @product.name %></h1>
 <%= @product.description %>
-<%= format_price(@product.price) %>
+<%= format_price @product.price %>
 
 <% if @product.stock_quantity == 0 %>
   <h4>Out of stock!</h4>

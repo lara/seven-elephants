@@ -2,16 +2,13 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
     <th>Price</th>
   </tr>
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td><%= product.price %></td>
-    <td><%= link_to "Show", product %></td>
+    <td><%= link_to product.name, product %></td>
+    <td><%= format_price product.price %></td>
   </tr>
 <% end %>
 </table>

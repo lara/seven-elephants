@@ -1,0 +1,27 @@
+<h1>My Shopping Cart</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+
+<% @order_products_with_product.each do |order_product| %>
+  <tr>
+    <td><%= order_product.product.name %></td>
+    <td><%= order_product.product.description %></td>
+    <td><%= order_product.quantity %></td>
+    <td><%= format_price order_product.total %></td>
+    <td><%= link_to "Show", order_product.product %></td>
+    <td><%= link_to "Delete", order_product, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<div class="order-summary">
+  <h5>Subtotal: <%= format_price @order.total %></h5>
+  <h5>Estimated Tax: 0</h5>
+  <h1>Total: <%= format_price @order.total %></h1>
+</div>
