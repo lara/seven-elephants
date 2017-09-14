@@ -10,12 +10,11 @@
 
 <% @order_products_with_product.each do |order_product| %>
   <tr>
-    <td><%= order_product.product.name %></td>
+    <td><%= link_to order_product.product.name, order_product.product %></td>
     <td><%= order_product.product.description %></td>
     <td><%= order_product.quantity %></td>
     <td><%= format_price order_product.total %></td>
-    <td><%= link_to "Show", order_product.product %></td>
-    <td><%= link_to "Delete", order_product, method: :delete %></td>
+    <td><%= link_to "Remove", order_product, method: :delete %></td>
   </tr>
 <% end %>
 </table>
