@@ -14,7 +14,7 @@
     <td><%= order_product.product.description %></td>
     <td><%= order_product.quantity %></td>
     <td><%= format_price order_product.total %></td>
-    <td><%= link_to "Remove", order_product, method: :delete %></td>
+    <td><%= link_to "X", order_product, method: :delete %></td>
   </tr>
 <% end %>
 </table>

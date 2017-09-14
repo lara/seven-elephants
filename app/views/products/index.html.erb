@@ -1,14 +1,8 @@
 <h1>Products</h1>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Price</th>
-  </tr>
 
+<ul class="products-index">
 <% @products.each do |product| %>
-  <tr>
-    <td><%= link_to product.name, product %></td>
-    <td><%= format_price product.price %></td>
-  </tr>
+  <li class="product"><%= link_to product.name, product %></li>
+  <li class="product"><%= format_price product.price %></li>
 <% end %>
-</table>
+</ul>

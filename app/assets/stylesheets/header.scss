@@ -5,8 +5,10 @@ header {
   justify-content: space-between;
   position: relative;
   height: 100px;
-  background-color: #fff;
+  // background-color: #fff;
   border-bottom: 1px solid rgb(210, 224, 255);
+  animation: colorchange 50s;
+  -webkit-animation: colorchange 50s; /* Chrome and Safari */
 
   a {
     text-decoration: none;
@@ -37,6 +39,21 @@ header {
   li {
     flex: 1;
   }
-
-
 }
+
+ @keyframes colorchange {
+
+   0%   {background: #ddf1ff;}
+   25%  {background: #efddff;}
+   50%  {background: #eafbe5;}
+   75%  {background: #feffcb;}
+   100% {background: #dddff;}
+ }
+
+ @-webkit-keyframes colorchange {
+   0%   {background: #ddf1ff;}
+   25%  {background: #efddff;}
+   50%  {background: #eafbe5;}
+   75%  {background: #feffcb;}
+   100% {background: #dddff;}
+ }
