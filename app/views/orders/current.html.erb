@@ -21,7 +21,8 @@
 </table>
 
 <div class="order-summary">
-  <h5>Subtotal: <%= format_price @order.total %></h5>
-  <h5>Estimated Tax: 0</h5>
-  <h1>Total: <%= format_price @order.total %></h1>
+  <h2>Order Summary</h2>
+  <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
+  <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
+  <h3>Total: <%= format_price @order.total %></h3>
 </div>
