@@ -25,7 +25,7 @@ class ProductDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    description
+    stock_quantity
     price
   ].freeze
 
@@ -37,8 +37,6 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     price
     stock_quantity
-    created_at
-    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
