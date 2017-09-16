@@ -5,9 +5,6 @@ module Admin
     #
     # def index
     #   super
-    #   @resources = Order.
-    #     page(params[:page]).
-    #     per(10)
     # end
 
     # Define a custom finder by overriding the `find_resource` method:
@@ -17,5 +14,11 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+
+    private
+
+    def scoped_resource
+      Order.placed
+    end
   end
 end
