@@ -4,9 +4,11 @@
 
 .products-index {
   list-style: none;
-  display: inline-block;
+  display: inline;
+  position: absolute;
+  width: 100%;
 
   .product {
-    display: inline;
+    display: block;
   }
 }

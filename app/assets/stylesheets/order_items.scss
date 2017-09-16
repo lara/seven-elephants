@@ -1,0 +1,21 @@
+.order-items {
+  display: inline-block;
+  flex-grow: 3;
+  padding: 30px 0;
+
+  th, td {
+    padding: 15px;
+  }
+
+  .quantity {
+    text-align: center;
+  }
+
+  .item-total {
+    text-align: right;
+  }
+
+  .remove-icon {
+    padding: 10px;
+  }
+}

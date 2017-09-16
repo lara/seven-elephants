@@ -1,27 +1,41 @@
 <h1>My Shopping Cart</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Quantity</th>
-    <th>Price</th>
-  </tr>
+<div class="order">
+  <div class="order-items">
+    <table>
+      <tr>
+        <th colspan="2">Product</th>
+        <th>Each</th>
+        <th>Quantity</th>
+        <th class="item-total">Total</th>
+      </tr>
 
-<% @order_products_with_product.each do |order_product| %>
-  <tr>
-    <td><%= link_to order_product.product.name, order_product.product %></td>
-    <td><%= order_product.product.description %></td>
-    <td><%= order_product.quantity %></td>
-    <td><%= format_price order_product.total %></td>
-    <td><%= link_to "X", order_product, method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <% @order_products_with_product.each do |order_product| %>
+      <tr>
+        <td colspan="2">
+          <%= link_to order_product.product.name, order_product.product %>
+        </td>
+        <td>
+          <%= format_price order_product.price %>
+        </td>
+        <td class="quantity">
+          &times; <%= order_product.quantity %>
+        </td>
+        <td class="item-total">
+          <%= format_price order_product.total %>
+        </td>
+        <td class="remove-icon">
+          <%= link_to "X", order_product, method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
 
-<div class="order-summary">
-  <h2>Order Summary</h2>
-  <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
-  <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
-  <h3>Total: <%= format_price @order.total %></h3>
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
+    <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
+    <h3>Total: <%= format_price @order.total %></h3>
+  </div>
 </div>

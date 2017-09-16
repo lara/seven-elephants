@@ -1,20 +1,4 @@
-.order-summary {
-  // background-color: red;
-  display: inline-block;
-  float: right;
-  width: 30%;
-  text-align: justify;
-
-  h2 {
-    border-bottom: 1px solid black;
-    width: 50%;
-  }
-
-  p {
-
-    .order-total {
-      display: inline-block;
-      float: right;
-    }
-  }
+.order {
+  display: flex;
+  justify-content: space-between;
 }
