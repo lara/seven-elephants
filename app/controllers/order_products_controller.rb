@@ -1,8 +1,11 @@
 class OrderProductsController < ApplicationController
   def create
-    @product = Product.find(order_product_params[:product_id])
-    @order.add_order_product(quantity: order_product_params[:quantity], product: @product)
+    @product = Product.find(create_order_product_params[:product_id])
+    @order.add_order_product(quantity: create_order_product_params[:quantity], product: @product)
     flash[:success] = "Added to cart!"
+    redirect_to product_path(@product)
+  rescue ActiveRecord::RecordInvalid
+    flash[:error] = "This item doesn't have any left in stock."
     redirect_to product_path(@product)
   end
 
