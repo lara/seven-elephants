@@ -9,7 +9,12 @@ class OrderProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
-  def update; end
+  def update
+    @order_product = OrderProduct.find(params[:id])
+    @order_product.update(update_order_product_params)
+
+    render js: "window.location.reload()"
+  end
 
   def destroy
     @order_product = OrderProduct.find(params[:id])
@@ -19,7 +24,11 @@ class OrderProductsController < ApplicationController
 
   private
 
-  def order_product_params
+  def create_order_product_params
     params.require(:order_product).permit(:quantity, :product_id)
+  end
+
+  def update_order_product_params
+    params.require(:order_product).permit(:quantity)
   end
 end
