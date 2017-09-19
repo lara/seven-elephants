@@ -30,10 +30,37 @@ body {
   font: 20px 'Muli', sans-serif;
   line-height: 2rem;
   height: 100%;
-  background-color: rgb(40, 44, 52);
+  background-color: rgb(33, 37, 43);
   color: $white;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: 0;
+
+  &:before, &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+  }
+
+  &:before {
+    width: 200px;
+    height: 800px;
+    transform: rotate(25deg);
+    top: -200px;
+    left: -100px;
+    z-index: -1;
+    background-color: rgb(40, 44, 52);
+  }
+
+  &:after {
+    width: 200px;
+    height: 1000px;
+    transform: rotate(50deg);
+    top: -280px;
+    left: -50px;
+    z-index: -2;
+    background-color: lighten(rgb(40, 44, 52), 2%);
+  }
 }
 
 main {
