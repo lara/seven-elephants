@@ -51,6 +51,9 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-carrierwave (0.2.0)
+      administrate (< 1.0.0)
+      rails (>= 4.2)
     arel (8.0.0)
     ast (2.3.0)
     autoprefixer-rails (7.1.4)
@@ -228,6 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-carrierwave (~> 0.2.0)
   byebug
   capybara (~> 2.13)
   carrierwave (~> 1.0)

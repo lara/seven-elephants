@@ -3,6 +3,7 @@
 <ul class="products-index">
   <% @products.each do |product| %>
     <div class="product">
+      <li><%= product.image.url && image_tag(product.image.url) %></li>
       <li><%= link_to product.name, product %></li>
       <li><%= format_price product.price %></li>
     </div>

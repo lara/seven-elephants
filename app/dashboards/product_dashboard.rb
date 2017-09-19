@@ -13,6 +13,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description: Field::Text,
     price: Field::Number,
     stock_quantity: Field::Number,
+    image: Field::Carrierwave,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -27,6 +28,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name
     stock_quantity
     price
+    image
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,6 +39,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     price
     stock_quantity
+    image
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -47,6 +50,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     price
     stock_quantity
+    image
   ].freeze
 
   # Overwrite this method to customize how products are displayed
