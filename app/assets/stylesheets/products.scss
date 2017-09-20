@@ -1,22 +1,4 @@
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.products-index {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 20px;
-  max-width: 940px;
-  width: 100%;
-  margin: 0 auto;
-  list-style: none;
-
-  .product {
-    display: block;
-    padding: 1em;
-    color: black;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-  }
+.products-show {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,14 +1,21 @@
-<h1><%= @product.name %></h1>
-<%= image_tag @product.image.url %>
-<%= @product.description %>
-<%= format_price @product.price %>
+<div class="products-show">
+  <%= image_tag @product.image.url %>
 
-<% if @product.stock_quantity == 0 %>
-  <h4>Out of stock!</h4>
-<% else %>
-  <%= form_for @order_product do |f| %>
-    Quantity: <%= f.select :quantity, 1..([10, @product.stock_quantity].min) %>
-    <%= f.hidden_field :product_id %>
-    <%= f.submit "Add to Cart" %>
-  <% end %>
-<% end %>
+  <div class="product-info">
+    <h2><%= @product.name %></h2>
+    <span class="description"><%= @product.description %></span>
+    <span class="price"><%= format_price @product.price %></span>
+
+    <div class="add-to-cart-button">
+      <% if @product.stock_quantity == 0 %>
+        <h4>Out of stock!</h4>
+      <% else %>
+        <%= form_for @order_product do |f| %>
+          Quantity: <%= f.select :quantity, 1..([10, @product.stock_quantity].min) %>
+          <%= f.hidden_field :product_id %>
+          <%= f.submit "Add to Cart" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
