@@ -1,24 +1,28 @@
-# README
+# Seven Elephants 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Seven Elephants is a Rails 5 E-Commerce web application. 
 
-Things you may want to cover:
 
-* Ruby version
+![alt text](https://raw.githubusercontent.com/laraaydin/seven-elephants/master/screenshot.png)
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Setup
 
-* Database initialization
+1. Get the code.
 
-* How to run the test suite
+`https://github.com/laraaydin/seven-elephants.git`
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Setup the environment.
 
-* Deployment instructions
+`bin/setup`
 
-* ...
+3. Start the server.
+
+`rails s`
+
+## Ongoing
+
+* Run RuboCop before committing. There's a comprehensive style guide for this project based on Thoughbot's Guides (https://github.com/thoughtbot/guides)
+
+`rubocop`
