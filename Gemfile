@@ -1,3 +1,4 @@
+ruby "2.4.0"
 source "https://rubygems.org"
 
 git_source(:github) do |repo_name|
@@ -12,6 +13,7 @@ gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.3"
 gem "sass-rails", "~> 5.0"
+gem "stripe"
 gem "uglifier", ">= 1.3.0"
 gem "normalize-rails"
 gem "carrierwave", "~> 1.0"
