@@ -11,18 +11,26 @@ Seven Elephants is a Rails 5 E-Commerce web application.
 
 1. Get the code.
 
-`https://github.com/laraaydin/seven-elephants.git`
+```sh
+https://github.com/laraaydin/seven-elephants.git
+```
 
 2. Setup the environment.
 
-`bin/setup`
+```sh
+bin/setup
+```
 
 3. Start the server.
 
-`rails s`
+```sh
+rails s
+```
 
 ## Ongoing
 
 * Run RuboCop before committing. There's a comprehensive style guide for this project based on Thoughbot's Guides (https://github.com/thoughtbot/guides)
 
-`rubocop`
+```sh
+rubocop
+```
