@@ -4,10 +4,12 @@
   </div>
 
   <div class="search">
-    <label for="search">
-      <i class="fa fa-search" aria-hidden="true"></i>
-    </label>
-    <input type="search" id="search">
+    <%= form_tag root_path, method: :get do %>
+      <label for="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </label>
+      <input name="search_term" type="search" id="search">
+    <% end %>
   </div>
 
   <nav>
