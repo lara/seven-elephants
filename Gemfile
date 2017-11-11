@@ -18,6 +18,7 @@ gem "uglifier", ">= 1.3.0"
 gem "normalize-rails"
 gem "carrierwave", "~> 1.0"
 gem "administrate-field-carrierwave", "~> 0.2.0"
+gem "sunspot_rails"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
@@ -31,6 +32,7 @@ group :development do
   gem "web-console", ">= 3.3.0"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "sunspot_solr"
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
