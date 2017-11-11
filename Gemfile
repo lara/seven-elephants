@@ -1,24 +1,21 @@
 ruby "2.4.0"
 source "https://rubygems.org"
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+gem "rails", "~> 5.1.3"
 
-gem "administrate"
-gem "coffee-rails", "~> 4.2"
-gem "jbuilder", "~> 2.5"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
-gem "rails", "~> 5.1.3"
+
+gem "administrate-field-carrierwave", "~> 0.2.0"
+gem "administrate"
+gem "carrierwave", "~> 1.0"
+gem "coffee-rails", "~> 4.2"
+gem "jbuilder", "~> 2.5"
+gem "normalize-rails"
 gem "sass-rails", "~> 5.0"
 gem "stripe"
-gem "uglifier", ">= 1.3.0"
-gem "normalize-rails"
-gem "carrierwave", "~> 1.0"
-gem "administrate-field-carrierwave", "~> 0.2.0"
 gem "sunspot_rails"
+gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
@@ -34,5 +31,3 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "sunspot_solr"
 end
-
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
