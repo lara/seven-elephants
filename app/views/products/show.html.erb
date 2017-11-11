@@ -3,10 +3,10 @@
 
   <div class="product-info">
     <h2><%= @product.name %></h2>
-    <span class="description"><%= @product.description %></span>
+    <p class="description"><%= @product.description %></p>
     <span class="price"><%= format_price @product.price %></span>
 
-    <div class="add-to-cart-button">
+    <div class="add-to-cart-form">
       <% if @product.stock_quantity == 0 %>
         <h4>Out of stock!</h4>
       <% else %>

@@ -1,9 +1,23 @@
 .products-show {
-  float: right;
   text-align: justify;
+  align-items: flex-start;
+
+  img {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 2em;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
 
   .description {
     font-size: 0.9rem;
-    float: right;
+  }
+
+  .product-info {
+    flex-grow: 1;
   }
 }
