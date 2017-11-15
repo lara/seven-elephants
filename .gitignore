@@ -21,3 +21,5 @@
 public/uploads
 
 solr
+
+.ENV
