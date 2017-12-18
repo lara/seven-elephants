@@ -11,7 +11,7 @@ class ProductDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
-    price: Field::Number,
+    price: PriceField,
     stock_quantity: Field::Number,
     image: Field::Carrierwave,
     created_at: Field::DateTime,
