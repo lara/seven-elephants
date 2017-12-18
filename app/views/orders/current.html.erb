@@ -42,27 +42,25 @@
     <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
     <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
     <h4>Total: <span class="order-total"><%= format_price @order.total %></span></h4>
-  </div>
 
-  <div class="stripe-checkout">
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Total: <%= format_price @order.total %></span>
-        </label>
-      </article>
+    <div class="stripe-checkout">
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+        </article>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="Your Seven Elephants Order"
-              data-amount="<%= @order.total %>"
-              data-locale="auto">
-      </script>
-    <% end %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Your Seven Elephants Order"
+                data-amount="<%= @order.total %>"
+                data-locale="auto"
+                data-label="Checkout with Stripe">
+        </script>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -10,4 +10,13 @@
   .order-total {
     float: right;
   }
+
+  .stripe-checkout {
+    float: right;
+  }
+
+  .stripe-button-el {
+    transform: scale(1.2);
+    transform-origin: right;
+  }
 }
