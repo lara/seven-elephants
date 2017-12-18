@@ -16,6 +16,10 @@ def create
     :description => 'Rails Stripe customer',
     :currency    => 'usd'
   )
+    @order.order_products.each do |order_product|
+      order_product.product.stock_quantity -= order_product.quantity
+      order_product.product.save
+    end
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
