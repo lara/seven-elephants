@@ -59,9 +59,10 @@
 
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="500"
-              data-locale="auto"></script>
+              data-description="Your Seven Elephants Order"
+              data-amount="<%= @order.total %>"
+              data-locale="auto">
+      </script>
     <% end %>
   </div>
 </div>
