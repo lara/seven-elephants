@@ -13,7 +13,11 @@ class ProductDashboard < Administrate::BaseDashboard
     description: Field::Text,
     price: PriceField,
     stock_quantity: Field::Number,
-    image: Field::Carrierwave,
+    images: Field::Carrierwave.with_options(
+      image: :standard,
+      multiple: true,
+      image_on_index: true,
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,7 +32,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name
     stock_quantity
     price
-    image
+    images
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,7 +43,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     price
     stock_quantity
-    image
+    images
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -50,7 +54,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     price
     stock_quantity
-    image
+    images
   ].freeze
 
   # Overwrite this method to customize how products are displayed
@@ -59,4 +63,8 @@ class ProductDashboard < Administrate::BaseDashboard
   # def display_resource(product)
   #   "Product ##{product.id}"
   # end
+
+  def permitted_attributes
+    super - [:images] + [{ images: [] }]
+  end
 end

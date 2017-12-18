@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20170919031746) do
     t.integer "stock_quantity", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.json "images"
   end
 
   add_foreign_key "order_products", "orders"

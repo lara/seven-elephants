@@ -1,5 +1,7 @@
 <div class="products-show">
-  <%= image_tag @product.image.url %>
+  <% @product.images.each do |image| %>
+    <%= image_tag image.url %>
+  <% end %>
 
   <div class="product-info">
     <h2><%= @product.name %></h2>

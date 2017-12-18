@@ -19,13 +19,12 @@
     border-radius: 5px;
     background-color: #f0f0f0;
 
-    img {
-      object-position: center;
-      min-width: 200px;
+    .square-image {
       width: 200px;
       height: 200px;
       background-position: center center;
-      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 5px;
     }
   }
 }
