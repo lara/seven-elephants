@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     @order = Order.find_by(id: session[:order_id]) || Order.create
     session[:order_id] = @order.id
   end
+
+  def expire_shopping_cart
+    session[:order_id] = nil
+  end
 end
