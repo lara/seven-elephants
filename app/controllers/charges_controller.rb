@@ -26,4 +26,5 @@ rescue Stripe::CardError => e
   redirect_to new_charge_path
 end
     @order.update(placed_at: Time.now)
+    expire_shopping_cart
 end
