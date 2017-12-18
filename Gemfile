@@ -6,8 +6,8 @@ gem "rails", "~> 5.1.3"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 
-gem "administrate-field-carrierwave", "~> 0.2.0"
 gem "administrate"
+gem "administrate-field-carrierwave", "~> 0.2.0"
 gem "carrierwave", "~> 1.0"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
@@ -27,8 +27,8 @@ end
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
-  gem "web-console", ">= 3.3.0"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "sunspot_solr"
+  gem "web-console", ">= 3.3.0"
 end
