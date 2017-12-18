@@ -3,13 +3,14 @@ class CartQuantityCorrector
 
   def initialize(order)
     @order = order
+    @changed = false
   end
 
   def correct_quantities
     order_products_with_product.each do |order_product|
       if order_product.quantity > order_product.product.stock_quantity
         order_product.update(quantity: order_product.product.stock_quantity)
-        flash[:notice] = "We had to remove some of the items from your cart because they are no longer in stock!"
+        @changed = true
       end
 
       if order_product.quantity == 0
@@ -20,5 +21,9 @@ class CartQuantityCorrector
 
   def order_products_with_product
     order.order_products.includes(:product)
+  end
+
+  def changed_quantities?
+    @changed
   end
 end
