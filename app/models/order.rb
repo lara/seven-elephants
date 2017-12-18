@@ -2,7 +2,7 @@ class Order < ApplicationRecord
   has_many :order_products
   has_many :products, through: :order_products
 
-  scope :placed, -> { none }
+  scope :placed, -> { where.not(placed_at: nil) }
   scope :shipped, -> { where.not(shipped_at: nil) }
   scope :cancelled, -> { where.not(cancelled_at: nil) }
   scope :cart, -> { where(placed_at: nil) }
