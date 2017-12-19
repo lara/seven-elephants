@@ -25,7 +25,7 @@ bin/setup
 3. Start the server.
 
 ```sh
-rails s
+foreman start
 ```
 
 ## Ongoing
