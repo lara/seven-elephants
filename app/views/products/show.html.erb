@@ -1,8 +1,4 @@
-<div class="products-show">
-  <% @product.images.each do |image| %>
-    <%= image_tag image.url %>
-  <% end %>
-
+<div class="container products-show">
   <div class="product-info">
     <h2><%= @product.name %></h2>
     <p class="description"><%= @product.description %></p>
@@ -13,10 +9,25 @@
         <h4>Out of stock!</h4>
       <% else %>
         <%= form_for @order_product do |f| %>
-          Quantity: <%= f.select :quantity, 1..([10, @product.stock_quantity].min) %>
+          <div class="select-container">
+            <span class="quantity"> Quantity: </span> <%= f.select :quantity, 1..([10, @product.stock_quantity].min) %>
+          </div>
           <%= f.hidden_field :product_id %>
-          <%= f.submit "Add to Cart" %>
+          <%= f.submit "Add to Shopping Cart" %>
         <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="product-images">
+    <div class="product-images-full">
+      <% @product.images.each do |image| %>
+        <%= image_tag image.url %>
+      <% end %>
+    </div>
+    <div class="product-image-thumbnails">
+      <% @product.images.each do |image| %>
+        <%= image_tag image.url %>
       <% end %>
     </div>
   </div>

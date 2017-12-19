@@ -1,13 +1,11 @@
-<ul class="products-index">
-  <% @products.each do |product| %>
-    <div class="product">
-      <li>
-        <div class="square-image"
-          style="background-image: url(<%= product.images[0].url %>)">
-        </div>
+<div class="container products-index">
+  <ul class="products-index-grid">
+    <% @products.each do |product| %>
+      <li class="product">
+        <%= image_tag product.images[0].url %>
+        <p class="product-name"><%= link_to product.name, product %></p>
+        <p class="product-price"><%= format_price product.price %></p>
       </li>
-      <li><%= link_to product.name, product %></li>
-      <li><%= format_price product.price %></li>
-    </div>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+</div>
