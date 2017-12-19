@@ -1,0 +1,22 @@
+select {
+  color: #53adc6;
+  position: relative;
+  bottom: 4px;
+  -webkit-appearance: none;
+  background: none;
+  height: 30px;
+  width: 50px;
+  border: none;
+  border-bottom: solid 2px #53adc6;
+  border-radius: 0;
+  outline: none;
+  padding: 0 4px;
+}
+
+.fa-angle-down {
+  color: #53adc6;
+  position: relative;
+  bottom: 4px;
+  right: 25px;
+  pointer-events: none;
+}

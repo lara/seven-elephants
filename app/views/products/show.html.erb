@@ -9,9 +9,10 @@
         <h4>Out of stock!</h4>
       <% else %>
         <%= form_for @order_product do |f| %>
-          <div class="select-container">
+          <label for="order_product[quantity]" class="select-container">
             <span class="quantity"> Quantity: </span> <%= f.select :quantity, 1..([10, @product.stock_quantity].min) %>
-          </div>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </label>
           <%= f.hidden_field :product_id %>
           <%= f.submit "Add to Shopping Cart" %>
         <% end %>

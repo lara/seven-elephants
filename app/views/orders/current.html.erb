@@ -20,7 +20,8 @@
         </td>
         <td class="quantity">
           <%= form_for order_product, remote: true do |f| %>
-            &times; <%= f.select :quantity, 1..([[order_product.product.stock_quantity, 10].min, order_product.quantity].max) %>
+            <%= f.select :quantity, 1..([[order_product.product.stock_quantity, 10].min, order_product.quantity].max) %>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
             <%= f.submit %>
           <% end %>
         </td>
