@@ -1,13 +1,14 @@
 class ProductsController < ApplicationController
   def index
-    if params[:search_term]
-      @products = Product.search {
-        fulltext params[:search_term]
-        spellcheck count: 3
-      }.results
-    else
-      @products = Product.all.order(created_at: :asc)
-    end
+    @products =
+      if params[:search_term]
+        Product.search do
+          fulltext params[:search_term]
+          spellcheck count: 3
+        end.results
+      else
+        Product.all.order(created_at: :asc)
+      end
   end
 
   def show
