@@ -17,78 +17,71 @@
 
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
 
-$blue: #53adc6;
-$red: #cf726e;
-$green: #5bc89e;
-$white: #f0f0f0;
-
 html {
     height: 100%;
-}
 
-body {
-  font: 20px 'Muli', sans-serif;
-  line-height: 2rem;
-  height: 100%;
-  background-color: rgb(33, 37, 43);
-  color: $white;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: 0;
+    body {
+      font: 20px 'Muli', sans-serif;
+      line-height: 2rem;
+      min-height: 100vh;
+      background-color: rgb(33, 37, 43);
+      color: #f0f0f0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: 0;
 
-  &:before, &:after {
-    content: " ";
-    position: absolute;
-    display: block;
-  }
+      &:before, &:after {
+        content: " ";
+        position: absolute;
+        display: block;
+      }
 
-  &:before {
-    width: 200px;
-    height: 800px;
-    transform: rotate(25deg);
-    top: -200px;
-    left: -100px;
-    z-index: -1;
-    background-color: rgb(40, 44, 52);
-  }
+      &:before {
+        width: 200px;
+        height: 800px;
+        transform: rotate(25deg);
+        top: -200px;
+        left: -100px;
+        z-index: -1;
+        background-color: rgb(40, 44, 52);
+      }
 
-  &:after {
-    width: 200px;
-    height: 1000px;
-    transform: rotate(50deg);
-    top: -280px;
-    left: -50px;
-    z-index: -2;
-    background-color: lighten(rgb(40, 44, 52), 2%);
-  }
-}
+      &:after {
+        width: 200px;
+        height: 1000px;
+        transform: rotate(50deg);
+        top: -280px;
+        left: -50px;
+        z-index: -2;
+        background-color: lighten(rgb(40, 44, 52), 2%);
+      }
 
-main {
-  padding: 0 2rem;
-}
+      main {
+        padding: 0 2rem;
         margin: 40px;
+      }
 
-img {
-  border-radius: 5px;
-}
+      img {
+        border-radius: 5px;
+      }
 
-h1, h2, h3 {
-  font-family: 'Muli';
-  font-weight: bold;
-  color: $white;
-  margin-top: 1rem;
-}
+      h1, h2, h3 {
+        font-family: 'Muli';
+        font-weight: bold;
+      }
 
-a {
-  color: $blue;
-  text-decoration: none;
-}
+      a {
+        color: #53adc6;
+        text-decoration: none;
+      }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-select {
-  min-width: 60px;
+      select {
+        min-width: 60px;
+      }
+    }
 }
