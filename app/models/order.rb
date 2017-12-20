@@ -29,4 +29,8 @@ class Order < ApplicationRecord
   def number_of_items
     order_products.sum(:quantity)
   end
+
+  def quantity_for_product(product)
+    order_products.find_by(product: product)&.quantity || 0
+  end
 end

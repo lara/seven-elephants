@@ -14,5 +14,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @order_product = OrderProduct.new(product: @product)
+    @in_stock = @product.stock_quantity - @order.quantity_for_product(@product)
   end
 end
