@@ -7,6 +7,6 @@ class OrdersController < ApplicationController
       flash[:notice] = "We had to remove some of the items from your cart because they are no longer in stock!"
     end
 
-    @order_products_with_product = @order.order_products.includes(:product).order(created_at: :desc)
+    @order_products_with_product = @order.order_products.by_created_at
   end
 end
