@@ -19,6 +19,7 @@ class ChargesController < ApplicationController
     end
 
     @order.update(placed_at: Time.now)
+    OrderMailer.order_placed_email(@order).deliver_now
     expire_shopping_cart
   rescue Stripe::CardError => e
     flash[:error] = e.message

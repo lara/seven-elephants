@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for your purchase! 🐘</h1>
+    <p>You will receive another email when your items are in transit.</p>
+    <p>Below, you will find the details of your order.</p>
+
+    <h2>Order Details:</h2>
+    <p>Order Confirmation Number: <%= @order.id %></p>
+
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      <% @order.order_products.by_product_name.each do |order_product| %>
+      <tr>
+        <td><%= order_product.product.name %></td>
+        <td><%= order_product.quantity %></td>
+        <td>$<%= (order_product.total / 100) %></td>
+      </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
