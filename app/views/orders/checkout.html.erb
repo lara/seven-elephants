@@ -1,1 +1,23 @@
 <h2>Checkout</h2>
+<p>Please enter your shipping address:</p>
+
+<div class="stripe-checkout">
+  <%= form_tag charges_path do %>
+    <%= text_field_tag :autocomplete_address %>
+    <%= hidden_field_tag :address %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Your Seven Elephants Order"
+            data-amount="<%= @order.total %>"
+            data-locale="auto"
+            data-label="Checkout with Stripe">
+    </script>
+  <% end %>
+</div>
