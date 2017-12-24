@@ -9,4 +9,6 @@ class OrdersController < ApplicationController
 
     @order_products_with_product = @order.order_products.by_created_at
   end
+
+  def checkout; end
 end
