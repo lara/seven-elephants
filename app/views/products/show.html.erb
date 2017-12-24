@@ -22,13 +22,13 @@
 
   <div class="product-images">
     <div class="product-images-full">
-      <% @product.images.each do |image| %>
-        <%= image_tag image.url %>
+      <% @product.images.each_with_index do |image, index| %>
+        <%= image_tag image.url, id: "image-#{index}" %>
       <% end %>
     </div>
     <div class="product-image-thumbnails">
-      <% @product.images.each do |image| %>
-        <%= image_tag image.url %>
+      <% @product.images.each_with_index do |image, index| %>
+        <%= image_tag image.url, id: "image-thumbnail-#{index}" %>
       <% end %>
     </div>
   </div>
