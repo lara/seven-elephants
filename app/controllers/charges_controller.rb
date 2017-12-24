@@ -7,6 +7,8 @@ class ChargesController < ApplicationController
       source: params[:stripeToken],
     )
 
+    @order.update!(address: params[:address], email: customer.email, placed_at: Time.now)
+
     Stripe::Charge.create(
       customer: customer.id,
       amount: @order.total,
@@ -18,7 +20,6 @@ class ChargesController < ApplicationController
       order_product.product.save
     end
 
-    @order.update(placed_at: Time.now)
     OrderMailer.order_placed_email(@order).deliver_now
     expire_shopping_cart
   rescue Stripe::CardError => e
