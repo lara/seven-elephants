@@ -34,5 +34,9 @@ module Admin
     def scoped_resource
       Order.placed
     end
+
+    def valid_action?(name, resource = resource_class)
+      %w[new edit destroy].exclude?(name.to_s) && super
+    end
   end
 end
