@@ -43,9 +43,6 @@
     <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
     <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
     <h4>Total: <span class="order-total"><%= format_price @order.total %></span></h4>
-
-    <div class="checkout-button">
-      <%= link_to "Proceed to Checkout", checkout_path %>
-    </div>
+    <%= link_to "Proceed to Checkout", checkout_path, class: "button" %>
   </div>
 </div>

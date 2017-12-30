@@ -8,17 +8,4 @@
   .order-total {
     float: right;
   }
-
-  .stripe-checkout {
-    float: right;
-  }
-
-  .stripe-button-el {
-    transform: scale(1.2);
-    transform-origin: right;
-  }
-
-  .stripe-button-el span{
-    background-image: linear-gradient(#53adc6,#53adc6 85%,#53adc6);
-  }
 }
