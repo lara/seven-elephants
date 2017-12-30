@@ -25,6 +25,8 @@ class OrderDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     status: OrderStatusField,
+    customer_name: Field::Text,
+    customer_phone_number: PhoneNumberField,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -43,8 +45,10 @@ class OrderDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     products
     id
+    customer_name
     email
     address
+    customer_phone_number
     placed_at
     shipped_at
     cancelled_at
