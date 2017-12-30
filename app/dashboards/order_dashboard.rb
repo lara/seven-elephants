@@ -13,9 +13,15 @@ class OrderDashboard < Administrate::BaseDashboard
     id: Field::Number,
     email: Field::String.with_options(searchable: false),
     address: Field::Text,
-    placed_at: Field::DateTime,
-    shipped_at: Field::DateTime,
-    cancelled_at: Field::DateTime,
+    placed_at: Field::DateTime.with_options(
+      format: "%m/%d/%y at %T",
+    ),
+    shipped_at: Field::DateTime.with_options(
+      format: "%m/%d/%y at %T",
+    ),
+    cancelled_at: Field::DateTime.with_options(
+      format: "%m/%d/%y at %T",
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
