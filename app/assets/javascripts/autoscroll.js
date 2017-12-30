@@ -8,5 +8,5 @@ thumbnails.forEach((thumbnail) => {
 })
 
 function imagePosition (imageIndex) {
-  return document.getElementById(`image-${imageIndex}`).getBoundingClientRect().y
+  return document.getElementById(`image-${imageIndex}`).getBoundingClientRect().top + window.scrollY
 }
