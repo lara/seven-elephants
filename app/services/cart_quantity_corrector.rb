@@ -13,7 +13,7 @@ class CartQuantityCorrector
         @changed = true
       end
 
-      if order_product.quantity == 0
+      if order_product.quantity.zero?
         order_product.destroy
       end
     end
