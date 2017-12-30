@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :orders
+    resources :orders do
+      post :ship
+      post :cancel
+    end
     resources :products
 
     root to: "orders#index"

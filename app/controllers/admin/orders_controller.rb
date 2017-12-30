@@ -7,6 +7,20 @@ module Admin
     #   super
     # end
 
+    def ship
+      order = Order.find(params[:order_id])
+      order.update(shipped_at: Time.now)
+      flash[:notice] = "Order ##{order.id} is marked as shipped."
+      redirect_back fallback_location: :index
+    end
+
+    def cancel
+      order = Order.find(params[:order_id])
+      order.update(cancelled_at: Time.now)
+      flash[:notice] = "Order ##{order.id} is marked as cancelled."
+      redirect_back fallback_location: :index
+    end
+
     # Define a custom finder by overriding the `find_resource` method:
     # def find_resource(param)
     #   Order.find_by!(slug: param)
