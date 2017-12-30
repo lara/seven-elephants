@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+
+
+en:
+  helpers:
+    label:
+      product:
+        id: "Product #"
+      order:
+        address: "Shipping Address"
+        id: "Order #"
+        email: "Customer Email"
