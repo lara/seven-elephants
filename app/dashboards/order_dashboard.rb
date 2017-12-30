@@ -24,6 +24,7 @@ class OrderDashboard < Administrate::BaseDashboard
     ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    status: OrderStatusField,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -33,7 +34,7 @@ class OrderDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    placed_at
+    status
     email
   ].freeze
 

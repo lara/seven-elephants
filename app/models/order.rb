@@ -7,6 +7,10 @@ class Order < ApplicationRecord
   scope :cancelled, -> { where.not(cancelled_at: nil) }
   scope :cart, -> { where(placed_at: nil) }
 
+  alias_attribute :placed?, :placed_at?
+  alias_attribute :shipped?, :shipped_at?
+  alias_attribute :cancelled?, :cancelled_at?
+
   def total
     order_products.sum("price * quantity")
   end
@@ -32,5 +36,11 @@ class Order < ApplicationRecord
 
   def quantity_for_product(product)
     order_products.find_by(product: product)&.quantity || 0
+  end
+
+  def status
+    return :cancelled if cancelled?
+    return :shipped if shipped?
+    return :placed if placed?
   end
 end
