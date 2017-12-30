@@ -42,3 +42,5 @@ en:
         address: "Shipping Address"
         id: "Order #"
         email: "Customer Email"
+      order_product:
+        price: "Unit Price"
