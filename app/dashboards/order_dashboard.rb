@@ -33,7 +33,7 @@ class OrderDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    products
+    placed_at
     email
   ].freeze
 
@@ -47,20 +47,12 @@ class OrderDashboard < Administrate::BaseDashboard
     placed_at
     shipped_at
     cancelled_at
-    created_at
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    order_products
-    products
-    email
-    address
-    placed_at
-    shipped_at
-    cancelled_at
   ].freeze
 
   # Overwrite this method to customize how orders are displayed
