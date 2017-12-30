@@ -42,7 +42,7 @@ as well as a link to its edit page.
 
 <section class="main-content__body">
   <dl>
-    <% page.attributes.each do |attribute| %>
+    <% page.attributes.reject { |attr| attr.data.nil? }.each do |attribute| %>
       <dt class="attribute-label" id="<%= attribute.name %>">
       <%= t(
         "helpers.label.#{resource_name}.#{attribute.name}",
