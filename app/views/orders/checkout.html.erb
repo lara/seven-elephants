@@ -1,10 +1,12 @@
 <h2>Checkout</h2>
-<p>Please enter your shipping address:</p>
+<p>Please fill out your shipping information:</p>
 
 <div class="stripe-checkout">
   <%= form_tag charges_path do %>
-    <%= text_field_tag :autocomplete_address %>
+    Name: <%= text_field_tag :customer_name %>
+    Address: <%= text_field_tag :autocomplete_address %>
     <%= hidden_field_tag :address %>
+    Phone Number: <%= text_field_tag :customer_phone_number %>
     <article>
       <% if flash[:error].present? %>
         <div id="error_explanation">

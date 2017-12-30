@@ -11,6 +11,9 @@ class Order < ApplicationRecord
   alias_attribute :shipped?, :shipped_at?
   alias_attribute :cancelled?, :cancelled_at?
 
+  validates :customer_name, presence: true, if: :placed?, length: { maximum: 22 }
+  validates :customer_phone_number, presence: true, if: :placed?, format: /\d+/
+
   def total
     order_products.sum("price * quantity")
   end

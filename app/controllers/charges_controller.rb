@@ -7,7 +7,13 @@ class ChargesController < ApplicationController
       source: params[:stripeToken],
     )
 
-    @order.update!(address: params[:address], email: customer.email, placed_at: Time.now)
+    @order.update!(
+      address: params[:address],
+      customer_name: params[:customer_name],
+      customer_phone_number: params[:customer_phone_number],
+      email: customer.email,
+      placed_at: Time.now,
+    )
 
     Stripe::Charge.create(
       customer: customer.id,
