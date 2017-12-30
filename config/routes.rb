@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post :cancel
     end
     resources :products
+    resources :order_products
 
     root to: "orders#index"
   end

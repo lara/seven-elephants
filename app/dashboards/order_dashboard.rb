@@ -43,7 +43,7 @@ class OrderDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    products
+    order_products
     id
     customer_name
     email
@@ -52,12 +52,6 @@ class OrderDashboard < Administrate::BaseDashboard
     placed_at
     shipped_at
     cancelled_at
-  ].freeze
-
-  # FORM_ATTRIBUTES
-  # an array of attributes that will be displayed
-  # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = %i[
   ].freeze
 
   # Overwrite this method to customize how orders are displayed
