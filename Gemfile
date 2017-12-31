@@ -6,6 +6,7 @@ gem "rails", "~> 5.1.3"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 
+gem "active_shipping"
 gem "administrate"
 gem "administrate-field-carrierwave", "~> 0.2.0"
 gem "carrierwave", "~> 1.0"
