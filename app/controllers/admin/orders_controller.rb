@@ -3,6 +3,7 @@ module Admin
     def ship
       order = Order.find(params[:order_id])
       order.update(shipped_at: Time.now)
+      ShipmentNotificationWorker.perform_in(10.seconds, order.id)
       flash[:notice] = "Order ##{order.id} is marked as shipped."
       redirect_back fallback_location: :index
     end
