@@ -97,6 +97,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
+    easy-box-packer (0.0.7)
     erubi (1.6.1)
     excon (0.60.0)
     execjs (2.7.0)
@@ -301,6 +302,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   dotenv-rails
+  easy-box-packer
   fog-aws
   jbuilder (~> 2.5)
   letter_opener

@@ -18,6 +18,10 @@ class Order < ApplicationRecord
     order_products.sum("price * quantity")
   end
 
+  def package_dimensions
+    PackageDimensionsCalculator.new(self).package_dimensions
+  end
+
   def add_order_product(options = {})
     current_item = order_products.find_by(product: options[:product])
 

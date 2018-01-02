@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171230193439) do
+ActiveRecord::Schema.define(version: 20180102161731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20171230193439) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "images"
+    t.float "length", null: false
+    t.float "width", null: false
+    t.float "height", null: false
+    t.float "weight", null: false
   end
 
   add_foreign_key "order_products", "orders"

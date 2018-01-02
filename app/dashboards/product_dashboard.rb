@@ -12,6 +12,11 @@ class ProductDashboard < Administrate::BaseDashboard
       multiple: true,
       image_on_index: true,
     ),
+    dimensions: DimensionField,
+    length: Field::Number,
+    width: Field::Number,
+    height: Field::Number,
+    weight: Field::Number.with_options(suffix: " grams"),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,6 +33,8 @@ class ProductDashboard < Administrate::BaseDashboard
     price
     stock_quantity
     images
+    dimensions
+    weight
   ].freeze
 
   FORM_ATTRIBUTES = %i[
@@ -36,6 +43,10 @@ class ProductDashboard < Administrate::BaseDashboard
     price
     stock_quantity
     images
+    length
+    width
+    height
+    weight
   ].freeze
 
   def display_resource(product)
