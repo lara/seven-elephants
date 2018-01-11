@@ -1,6 +1,6 @@
 <h2>My Shopping Cart</h2>
 
-<div class="order">
+<div class="cart">
   <div class="order-items">
     <table>
       <tr>
@@ -40,9 +40,7 @@
 
   <div class="order-summary">
     <h3>Order Summary</h3>
-    <p>Subtotal: <span class="order-total"><%= format_price @order.total %></span></p>
-    <p>Estimated Tax: <span class="order-total"><%= format_price 0 %></span></p>
-    <h4>Total: <span class="order-total"><%= format_price @order.total %></span></h4>
-    <%= link_to "Proceed to Checkout", checkout_path, class: "button" %>
+    <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+    <%= link_to "Checkout", shipping_info_path, class: "button" %>
   </div>
 </div>

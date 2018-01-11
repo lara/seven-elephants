@@ -15,10 +15,16 @@ class Order < ApplicationRecord
   validates :customer_phone_number, presence: true, if: :placed?, format: /\d+/
   validates :place_id, presence: true, if: :placed?
   validates :address, presence: true, if: :placed?
+  validates :shipping_method, presence: true, if: :placed?
+
+  before_update :set_address
+
+  def subtotal
+    order_products.sum("price * quantity")
+  end
 
   def total
-  before_update :set_address
-    order_products.sum("price * quantity")
+    subtotal + shipping_cost
   end
 
   def package_dimensions
