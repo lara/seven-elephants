@@ -22,7 +22,17 @@ class Order < ApplicationRecord
   end
 
   def package_dimensions
-    PackageDimensionsCalculator.new(self).package_dimensions
+    PackageDimensionsCalculator.new(self).package_dimensions || []
+  end
+
+  def package_weight
+    package_weight = 0
+    weights = order_products.joins(:product).pluck(:quantity, :weight)
+    weights.each do |order_product|
+      package_weight += order_product.first * order_product.second
+    end
+
+    package_weight
   end
 
   def add_order_product(options = {})
