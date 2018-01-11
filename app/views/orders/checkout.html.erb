@@ -1,19 +1,18 @@
-<h2>Checkout</h2>
-<p>Please fill out your shipping information:</p>
+<h2>Checkout - Step 3 of 3</h2>
 
-<div class="stripe-checkout">
-  <%= form_tag charges_path do %>
-    Name: <%= text_field_tag :customer_name %>
-    Address: <%= text_field_tag :autocomplete_address %>
-    <%= hidden_field_tag :address %>
-    Phone Number: <%= text_field_tag :customer_phone_number %>
-    <article>
-      <% if flash[:error].present? %>
-        <div id="error_explanation">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
-    </article>
+<div class="checkout">
+  <div class="order-items">
+    <p>Name: <%= @order.customer_name %></p>
+    <p>Address: <%= @order.address %></p>
+    <p>Phone Number: <%= @order.customer_phone_number %></p>
+    <p>Shipping Method: <%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></p>
+  </div>
+
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+    <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+    <p>Shipping Cost: <span class="order-total"><%= format_price @order.shipping_cost %></span></p>
+    <h4>Total: <span class="order-total"><%= format_price @order.total %></span></h4>
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Your Seven Elephants Order"
@@ -21,5 +20,5 @@
             data-locale="auto"
             data-label="Checkout with Stripe">
     </script>
-  <% end %>
+  </div>
 </div>
