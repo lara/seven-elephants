@@ -1,0 +1,22 @@
+<h2>Shipping - Step 1 of 3</h2>
+<%= form_for @shipping_info, url: shipping_info_path, html: { class: "checkout" } do |f| %>
+  <div class="order-items">
+    <p>Please fill out your shipping information:</p>
+    <%= f.label :customer_name, 'Name' %>:
+    <%= f.text_field :customer_name, required: true %>
+
+    <%= f.label :customer_phone_number, 'Phone Number' %>:
+    <%= f.text_field :customer_phone_number, required: true %>
+
+    <%= label_tag :autocomplete_address, 'Address' %>:
+    <%= text_field_tag :autocomplete_address, nil, required: true %>
+
+    <%= f.hidden_field :place_id, id: "place_id" %>
+  </div>
+
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+    <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+    <%= f.submit "Proceed", class: "button" %>
+  </div>
+<% end %>
