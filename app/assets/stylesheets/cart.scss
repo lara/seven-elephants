@@ -1,0 +1,11 @@
+.cart {
+  display: flex;
+  text-align: justify;
+  align-items: flex-start;
+}
+
+.edit_order_product {
+  input[type="submit"] {
+    display: none;
+  }
+}
