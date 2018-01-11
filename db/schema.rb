@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180102161731) do
     t.datetime "updated_at", null: false
     t.string "customer_name"
     t.string "customer_phone_number"
+    t.string "place_id"
   end
 
   create_table "products", force: :cascade do |t|

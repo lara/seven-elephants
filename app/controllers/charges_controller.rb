@@ -6,9 +6,9 @@ class ChargesController < ApplicationController
       email: params[:stripeEmail],
       source: params[:stripeToken],
     )
+    @client = GooglePlaces::Client.new(ENV.fetch("GOOGLE_API_KEY")).spot(params[:place_id])
 
     @order.update!(
-      address: params[:address],
       customer_name: params[:customer_name],
       customer_phone_number: params[:customer_phone_number],
       email: customer.email,

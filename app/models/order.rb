@@ -13,8 +13,11 @@ class Order < ApplicationRecord
 
   validates :customer_name, presence: true, if: :placed?, length: { maximum: 22 }
   validates :customer_phone_number, presence: true, if: :placed?, format: /\d+/
+  validates :place_id, presence: true, if: :placed?
+  validates :address, presence: true, if: :placed?
 
   def total
+  before_update :set_address
     order_products.sum("price * quantity")
   end
 
@@ -49,5 +52,15 @@ class Order < ApplicationRecord
     return :cancelled if cancelled?
     return :shipped if shipped?
     return :placed if placed?
+  end
+
+  private
+
+  def set_address
+    return unless place_id?
+
+    client = GooglePlaces::Client.new(ENV.fetch("GOOGLE_API_KEY"))
+    spot = client.spot(place_id)
+    self.address = spot.formatted_address
   end
 end

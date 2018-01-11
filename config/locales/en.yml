@@ -30,10 +30,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
-
-en:
   helpers:
     label:
       product:
@@ -44,3 +40,7 @@ en:
         email: "Customer Email"
       order_product:
         price: "Unit Price"
+  activerecord:
+    attributes:
+      order:
+        place_id: "Address"
