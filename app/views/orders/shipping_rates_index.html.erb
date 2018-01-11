@@ -1,0 +1,18 @@
+<h2>Shipping - Step 2 of 3</h2>
+<%= form_tag update_shipping_method_path, class: "checkout" do %>
+  <div class="order-items">
+      <ul>
+        <% @shipping_rates.each do |shipping_rate| %>
+        <li>
+          <%= radio_button_tag(:service_code, "#{shipping_rate.service_code}") %>
+          <%= label_tag(:shipping_method, "#{shipping_rate.service_name}, #{ format_price shipping_rate.price}") %>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+    <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+    <%= submit_tag "Proceed", class: "button" %>
+  </div>
+<% end %>
