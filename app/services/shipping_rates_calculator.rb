@@ -1,4 +1,6 @@
 class ShippingRatesCalculator
+  class PackageTooHeavyError < StandardError; end
+
   COUNTRY = ENV.fetch("MUKO_COUNTRY")
   STATE = ENV.fetch("MUKO_STATE")
   CITY = ENV.fetch("MUKO_CITY")
@@ -10,21 +12,70 @@ class ShippingRatesCalculator
   end
 
   def shipping_rates
-    package = [ActiveShipping::Package.new(@order.package_weight, @order.package_dimensions)]
+    combined_rates = []
 
-    origin = ActiveShipping::Location.new(country: COUNTRY,
-                                          state: STATE,
-                                          city: CITY,
-                                          zip: ZIPCODE)
+    if @order.package_weight < 368
+      combined_rates += first_class_parcel_response.rates
+    elsif @order.package_weight < 31751
+      combined_rates += priority_response.rates
+      combined_rates += express_response.rates
+    else
+      raise PackageTooHeavyError
+    end
 
-    destination = ActiveShipping::Location.new(country: @shipment_address.country,
-                                               state: @shipment_address.state,
-                                               city: @shipment_address.city,
-                                               postal_code: @shipment_address.postal_code)
+    combined_rates.sort_by(&:price)
+  end
 
-    usps = ActiveShipping::USPS.new(login: ENV.fetch("USPS_DEVELOPER_ID"))
-    response = usps.find_rates(origin, destination, package)
+  private
 
-    response.rates.sort_by(&:price)
+  def first_class_parcel_response
+    usps_rates_for_service(
+      service: :first_class,
+      first_class_mail_type: :parcel,
+    )
+  end
+
+  def priority_response
+    usps_rates_for_service(service: :priority)
+  end
+
+  def express_response
+    usps_rates_for_service(service: :express)
+  end
+
+  def usps_rates_for_service(service:, first_class_mail_type: nil)
+    usps.find_rates(
+      origin,
+      destination,
+      package,
+      service: service,
+      first_class_mail_type: first_class_mail_type,
+    )
+  end
+
+  def usps
+    ActiveShipping::USPS.new(login: ENV.fetch("USPS_DEVELOPER_ID"))
+  end
+
+  def package
+    [ActiveShipping::Package.new(@order.package_weight, @order.package_dimensions)]
+  end
+
+  def origin
+    ActiveShipping::Location.new(
+      country: COUNTRY,
+      state: STATE,
+      city: CITY,
+      zip: ZIPCODE,
+    )
+  end
+
+  def destination
+    ActiveShipping::Location.new(
+      country: @shipment_address.country,
+      state: @shipment_address.state,
+      city: @shipment_address.city,
+      postal_code: @shipment_address.postal_code,
+    )
   end
 end
