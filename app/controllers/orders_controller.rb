@@ -17,10 +17,9 @@ class OrdersController < ApplicationController
   end
 
   def update_shipping_method
-    shipping_rate = shipping_rates.detect { |rate| rate.service_code == params[:service_code] }
     @order.update!(
-      shipping_method: shipping_rate.service_name,
-      shipping_cost: shipping_rate.price,
+      shipping_method: chosen_shipping_rate.service_name,
+      shipping_cost: chosen_shipping_rate.price,
     )
     redirect_to checkout_path
   end
@@ -31,5 +30,9 @@ class OrdersController < ApplicationController
 
   def shipping_rates
     ShippingRatesCalculator.new(@order).shipping_rates
+  end
+
+  def chosen_shipping_rate
+    shipping_rates.detect { |rate| rate.service_code == params[:service_code] }
   end
 end
