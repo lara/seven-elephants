@@ -5,6 +5,7 @@ class ShippingRatesCalculator
   STATE = ENV.fetch("MUKO_STATE")
   CITY = ENV.fetch("MUKO_CITY")
   ZIPCODE = ENV.fetch("MUKO_ZIP")
+  USPS_DEVELOPER_ID = ENV.fetch("USPS_DEVELOPER_ID")
 
   def initialize(order)
     @order = order
@@ -54,7 +55,7 @@ class ShippingRatesCalculator
   end
 
   def usps
-    ActiveShipping::USPS.new(login: ENV.fetch("USPS_DEVELOPER_ID"))
+    ActiveShipping::USPS.new(login: USPS_DEVELOPER_ID)
   end
 
   def package
