@@ -26,6 +26,7 @@ class ChargesController < ApplicationController
     OrderMailer.order_placed_email(@order).deliver_now
     @placed_order = @order
     expire_shopping_cart
+    set_shopping_cart
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
