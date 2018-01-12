@@ -16,13 +16,13 @@ class ShippingRatesCalculator
 
     if @order.package_weight < 368
       combined_rates += first_class_parcel_response.rates
-    elsif @order.package_weight < 31751
+    end
+    if @order.package_weight < 31751
       combined_rates += priority_response.rates
       combined_rates += express_response.rates
     else
       raise PackageTooHeavyError
     end
-
     combined_rates.sort_by(&:price)
   end
 
