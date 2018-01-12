@@ -1,0 +1,23 @@
+<% content_for(:title) { "Ship #{page.page_title}" } %>
+
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title">
+    <%= content_for(:title) %>
+  </h1>
+</header>
+
+<section class="main-content__body">
+  <%= form_for @order, url: admin_order_confirm_shipping_path, method: :post do |f| %>
+    <div class="field-unit field-unit--number">
+      <div class="field-unit__label">
+        <%= f.label :tracking_number %>
+      </div>
+      <div class="field-unit__field">
+        <%= f.text_field :tracking_number, required: true %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "Proceed" %>
+    </div>
+  <% end %>
+</section>

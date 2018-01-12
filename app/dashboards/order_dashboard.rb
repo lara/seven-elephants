@@ -21,6 +21,9 @@ class OrderDashboard < Administrate::BaseDashboard
     status: OrderStatusField,
     customer_name: Field::Text,
     customer_phone_number: PhoneNumberField,
+    shipping_method: Field::Text,
+    shipping_cost: PriceField,
+    tracking_number: Field::Text,
   }.freeze
 
   COLLECTION_ATTRIBUTES = %i[
@@ -36,6 +39,9 @@ class OrderDashboard < Administrate::BaseDashboard
     email
     address
     customer_phone_number
+    shipping_method
+    shipping_cost
+    tracking_number
     placed_at
     shipped_at
     cancelled_at

@@ -16,6 +16,7 @@ class Order < ApplicationRecord
   validates :place_id, presence: true, if: :placed?
   validates :address, presence: true, if: :placed?
   validates :shipping_method, presence: true, if: :placed?
+  validates :tracking_number, presence: true, if: :shipped?
 
   before_update :set_address
 

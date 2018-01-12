@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :orders do
-      post :ship
+      get :ship
+      post :confirm_shipping
       post :cancel
     end
     resources :products
