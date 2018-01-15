@@ -2,14 +2,17 @@
 <%= form_for @shipping_info, url: shipping_info_path, html: { class: "checkout" } do |f| %>
   <div class="order-items">
     <p>Please fill out your shipping information:</p>
-    <%= f.label :customer_name, 'Name' %>:
+    <%= f.label :customer_name, "Name" %>:
     <%= f.text_field :customer_name, required: true %>
 
-    <%= f.label :customer_phone_number, 'Phone Number' %>:
+    <%= f.label :customer_phone_number, "Phone Number" %>:
     <%= f.text_field :customer_phone_number, required: true %>
 
-    <%= label_tag :autocomplete_address, 'Address' %>:
+    <%= label_tag :autocomplete_address, "Address" %>:
     <%= text_field_tag :autocomplete_address, nil, required: true %>
+
+    <%= label_tag :address_2, "Apt./Suite" %>:
+    <%= text_field_tag :address_2, nil %>
 
     <%= f.hidden_field :place_id, id: "place_id" %>
   </div>

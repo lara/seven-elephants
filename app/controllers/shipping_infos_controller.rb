@@ -18,6 +18,7 @@ class ShippingInfosController < ApplicationController
       customer_name: params[:shipping_info][:customer_name],
       customer_phone_number: params[:shipping_info][:customer_phone_number],
       place_id: params[:shipping_info][:place_id],
+      address_2: params[:address_2],
     }
   end
 end
