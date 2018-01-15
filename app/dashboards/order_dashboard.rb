@@ -8,7 +8,7 @@ class OrderDashboard < Administrate::BaseDashboard
     email: Field::String.with_options(searchable: false),
     address: Field::Text,
     placed_at: Field::DateTime.with_options(
-      format: "%m/%d/%y at %T",
+      format: "%m/%d/%y",
     ),
     shipped_at: Field::DateTime.with_options(
       format: "%m/%d/%y at %T",
@@ -28,6 +28,7 @@ class OrderDashboard < Administrate::BaseDashboard
 
   COLLECTION_ATTRIBUTES = %i[
     id
+    placed_at
     status
     email
   ].freeze
