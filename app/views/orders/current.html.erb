@@ -1,46 +1,50 @@
 <h2>My Shopping Cart</h2>
 
-<div class="cart">
-  <div class="order-items">
-    <table>
-      <tr>
-        <th colspan="2" width="50%">Product</th>
-        <th width="15%">Each</th>
-        <th width="20%">Quantity</th>
-        <th class="item-total" width="15%">Total</th>
-      </tr>
+<div class="checkout">
+  <% if @order_products_with_product.empty? %>
+    <p class="cart-empty">Your cart is currently empty. <%= link_to "Continue Shopping 🛒", root_path %></p>
+  <% else %>
+    <div class="order-column">
+      <table>
+        <tr>
+          <th colspan="2" width="50%">Product</th>
+          <th width="15%">Each</th>
+          <th width="20%">Quantity</th>
+          <th class="item-total" width="15%">Total</th>
+        </tr>
 
-    <% @order_products_with_product.each do |order_product| %>
-      <tr>
-        <td colspan="2">
-          <%= link_to order_product.product.name, order_product.product %>
-        </td>
-        <td>
-          <%= format_price order_product.price %>
-        </td>
-        <td class="quantity">
-          <%= form_for order_product, remote: true do |f| %>
-            <%= f.select :quantity, 1..([[order_product.product.stock_quantity, 10].min, order_product.quantity].max) %>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <%= f.submit %>
-          <% end %>
-        </td>
-        <td class="item-total">
-          <%= format_price order_product.total %>
-        </td>
-        <td class="remove-icon">
-          <%= link_to order_product, method: :delete do %>
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          <% end %>
-        </td>
-      </tr>
-    <% end %>
-    </table>
-  </div>
+        <% @order_products_with_product.each do |order_product| %>
+        <tr>
+          <td colspan="2">
+            <%= link_to order_product.product.name, order_product.product %>
+          </td>
+          <td>
+            <%= format_price order_product.price %>
+          </td>
+          <td class="quantity">
+            <%= form_for order_product, remote: true do |f| %>
+              <%= f.select :quantity, 1..([[order_product.product.stock_quantity, 10].min, order_product.quantity].max) %>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+              <%= f.submit %>
+            <% end %>
+          </td>
+          <td class="item-total">
+            <%= format_price order_product.total %>
+          </td>
+          <td class="remove-icon">
+            <%= link_to order_product, method: :delete do %>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
 
-  <div class="order-summary">
-    <h3>Order Summary</h3>
-    <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
-    <%= link_to "Checkout", shipping_info_path, class: "button" %>
-  </div>
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+      <%= link_to "Checkout", shipping_info_path, class: "button" %>
+    </div>
+  <% end %>
 </div>

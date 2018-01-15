@@ -1,0 +1,19 @@
+.remove-icon {
+  padding: 10px;
+
+  :hover {
+    animation: dance 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+  }
+}
+
+@keyframes dance {
+  25%, 75% {
+    transform: rotate(15deg);
+  }
+
+  50%, 100% {
+    transform: rotate(-15deg);
+  }
+}

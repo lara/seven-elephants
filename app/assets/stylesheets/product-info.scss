@@ -1,0 +1,35 @@
+.product-info {
+  align-items: center;
+  position: sticky;
+  top: 50px;
+
+  h2 {
+    margin: 0;
+  }
+
+  .description {
+    line-height: 2.5;
+    font-size: 0.9rem;
+  }
+
+  .price {
+    color: #53adc6;
+    font-size: 1.5rem;
+  }
+
+  .select-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .quantity {
+      font-size: 1.5rem;
+    }
+  }
+
+  .button {
+    width: 50%;
+  }
+}

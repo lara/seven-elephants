@@ -7,7 +7,7 @@
 <% else %>
   <%= form_tag update_shipping_method_path, class: "checkout" do %>
 
-    <div class="order-items">
+    <div class="order-column">
         <ul>
           <% @shipping_rates.each do |shipping_rate| %>
           <li>

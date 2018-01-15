@@ -1,8 +1,23 @@
 .button {
-  border: none;
-  background: none;
-  color: #53adc6;
+  background-image: linear-gradient(#53adc6,#53adc6 85%,#53adc6);
+  display: block;
+  color: #fff;
+  background-color: #53adc6;
   font-weight: bold;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 32px;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+// Links
+a.button {
+}
+
+// Inputs
+input.button, .stripe-button-el {
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -1,0 +1,10 @@
+.products-show {
+  display: flex;
+  text-align: justify;
+  align-items: flex-start;
+
+  .product-images, .product-info {
+    flex: 1;
+    width: 0;
+  }
+}

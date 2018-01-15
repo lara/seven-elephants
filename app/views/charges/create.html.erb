@@ -1,3 +1,7 @@
 <h2>Order Confirmation</h2>
-<p>Thanks, you paid <%= format_price @placed_order.total %>!</p>
-<p>Your order number is <%= @placed_order.id %>.</p>
+
+<div class="order-confirmation">
+  <p>Thanks, you paid <%= format_price @placed_order.total %>!</p>
+  <p>Your order number is <%= @placed_order.id %>.</p>
+  <p>Once your items are shipped, you will receive an email containing the tracking number.</p>
+</div>

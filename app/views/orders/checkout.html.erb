@@ -1,13 +1,12 @@
 <h2>Checkout - Step 3 of 3</h2>
 
 <div class="checkout">
-  <div class="order-items">
+  <div class="order-column">
     <p>Name: <%= @order.customer_name %></p>
     <p>Address: <%= @order.address %></p>
     <p>Phone Number: <%= @order.customer_phone_number %></p>
     <p>Shipping Method: <%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></p>
   </div>
-
   <div class="order-summary">
     <h3>Order Summary</h3>
     <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
@@ -20,9 +19,11 @@
           <p><%= flash[:error] %></p>
         </div>
       <% end %>
+
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="Your Seven Elephants Order"
+              data-name="Seven Elephants"
+              data-description="<%= @order.number_of_items %> items (<%= format_price @order.subtotal %> + shipping)"
               data-amount="<%= @order.total %>"
               data-locale="auto"
               data-label="Checkout with Stripe">

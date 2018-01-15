@@ -1,8 +1,37 @@
 .checkout {
   display: flex;
   justify-content: space-between;
+  text-align: justify;
+  align-items: flex-start;
 
-  .stripe-button-el span{
+  .cart-empty {
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .stripe-button-el span {
     background-image: linear-gradient(#53adc6,#53adc6 85%,#53adc6);
+    display: block;
+    color: #fff;
+    background-color: #53adc6;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 32px;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .edit_order_product {
+    input[type="submit"] {
+      display: none;
+    }
+  }
+
+  .order-confirmation {
+    justify-content: center;
   }
 }
