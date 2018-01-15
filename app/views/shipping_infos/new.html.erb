@@ -1,6 +1,6 @@
 <h2>Shipping - Step 1 of 3</h2>
 <%= form_for @shipping_info, url: shipping_info_path, html: { class: "checkout" } do |f| %>
-  <div class="order-items">
+  <div class="order-column">
     <p>Please fill out your shipping information:</p>
     <%= f.label :customer_name, "Name" %>:
     <%= f.text_field :customer_name, required: true %>

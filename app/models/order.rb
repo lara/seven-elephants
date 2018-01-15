@@ -57,20 +57,17 @@ class Order < ApplicationRecord
     end
   end
 
-  def number_of_items
-    order_products.sum(:quantity)
+  def package_dimensions
+    PackageDimensionsCalculator.new(self).package_dimensions || []
   end
 
-  def quantity_for_product(product)
-    order_products.find_by(product: product)&.quantity || 0
-  end
+  def package_weight
+    package_weight = 0
+    weights = order_products.joins(:product).pluck(:quantity, :weight)
+    weights.each do |order_product|
+      package_weight += order_product.first * order_product.second
+    end
 
-  def status
-    return :cancelled if cancelled?
-    return :shipped if shipped?
-    return :placed if placed?
-  end
-
-
+    package_weight
   end
 end
