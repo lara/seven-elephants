@@ -20,6 +20,8 @@
     <div class="order-summary">
       <h3>Order Summary</h3>
       <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
+      <p>Shipping: <span class="order-total">&mdash;</span></p>
+      <p>Total: <span class="order-total">&mdash;</span></p>
       <%= submit_tag "Proceed", class: "button" %>
     </div>
   <% end %>

@@ -44,7 +44,9 @@
     <div class="order-summary">
       <h3>Order Summary</h3>
       <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
-      <%= link_to "Checkout", shipping_info_path, class: "button" %>
+      <p>Shipping: <span class="order-total">&mdash;</span></p>
+      <p>Total: <span class="order-total">&mdash;</span></p>
+      <%= link_to "Proceed to Checkout", shipping_info_path, class: "button" %>
     </div>
   <% end %>
 </div>

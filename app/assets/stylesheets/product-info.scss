@@ -7,14 +7,19 @@
     margin: 0;
   }
 
+  .description, .price, .dimensions, .weight {
+    display: block;
+  }
+
   .description {
     line-height: 2.5;
     font-size: 0.9rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
   }
 
   .price {
-    color: #53adc6;
-    font-size: 1.5rem;
+    color: #fff;
   }
 
   .select-container {
@@ -23,10 +28,6 @@
     overflow: hidden;
     margin-top: 1rem;
     margin-bottom: 1rem;
-
-    .quantity {
-      font-size: 1.5rem;
-    }
   }
 
   .button {
