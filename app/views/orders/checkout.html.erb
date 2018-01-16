@@ -2,10 +2,16 @@
 
 <div class="checkout">
   <div class="order-column">
-    <p>Name: <%= @order.customer_name %></p>
-    <p>Address: <%= @order.address %></p>
-    <p>Phone Number: <%= @order.customer_phone_number %></p>
-    <p>Shipping Method: <%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></p>
+    <dl>
+      <dt>Name</dt>
+      <dd><%= @order.customer_name %></dd>
+      <dt>Address</dt>
+      <dd><%= @order.address %></dd>
+      <dt>Phone Number</dt>
+      <dd><%= @order.customer_phone_number %></dd>
+      <dt>Shipping Method</dt>
+      <dd><%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></dd>
+    </dl>
   </div>
   <div class="order-summary">
     <h3>Order Summary</h3>

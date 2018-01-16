@@ -24,6 +24,27 @@
     padding: 15px 10px 15px 10px;
   }
 
+  dt {
+    float: left;
+    clear: left;
+    min-width: 200px;
+    text-align: left;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  dt::after {
+    content: ":";
+  }
+
+  dd {
+    margin: 0 0 0 150px;
+  }
+
+  dd, dt {
+    padding: 0px 20px 20px 0px;
+  }
+
   input[type="text"] {
     display: block;
     box-sizing: border-box;
