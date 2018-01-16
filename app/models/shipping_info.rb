@@ -27,7 +27,11 @@ class ShippingInfo
   private
 
   def full_address
-    spot.formatted_address + ", Apt./Suite: " + address_2.to_s
+    if address_2.present?
+      spot.formatted_address + ", Apt./Suite: " + address_2.to_s
+    else
+      spot.formatted_address
+    end
   end
 
   def spot
