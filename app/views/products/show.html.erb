@@ -3,6 +3,7 @@
     <h2><%= @product.name %></h2>
     <p class="description"><%= @product.description %></p>
     <span class="price"><%= format_price @product.price %></span>
+      <span class="weight">Weight: <%= grams_to_pounds @product.weight %> lb</span>
 
     <div class="add-to-cart-form">
       <% if @in_stock == 0 %>
