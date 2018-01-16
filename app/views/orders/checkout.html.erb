@@ -12,7 +12,13 @@
       <dt>Shipping Method</dt>
       <dd><%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></dd>
     </dl>
+    <p>
+      Please confirm the information above, and click
+      <%= link_to "here", shipping_info_path %>
+      to make any changes.
+    </p>
   </div>
+
   <div class="order-summary">
     <h3>Order Summary</h3>
     <p>Subtotal: <span class="order-total"><%= format_price @order.subtotal %></span></p>
