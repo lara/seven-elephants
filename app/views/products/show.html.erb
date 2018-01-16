@@ -1,9 +1,12 @@
 <div class="products-show">
   <div class="product-info">
     <h2><%= @product.name %></h2>
-    <p class="description"><%= @product.description %></p>
-    <span class="price"><%= format_price @product.price %></span>
+    <p class="description">
+      <%= @product.description %>
+      <span class="dimensions">Dimensions: <%= @product.length %> &times; <%= @product.width %> &times; <%= @product.height %> cm</span>
       <span class="weight">Weight: <%= grams_to_pounds @product.weight %> lb</span>
+    </p>
+    <span class="price">Price: <%= format_price @product.price %></span>
 
     <div class="add-to-cart-form">
       <% if @in_stock == 0 %>
