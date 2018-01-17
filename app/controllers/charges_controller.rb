@@ -26,7 +26,7 @@ class ChargesController < ApplicationController
     expire_shopping_cart
     set_shopping_cart
   rescue Stripe::CardError, Stripe::InvalidRequestError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
+    flash[:error] = "Oops! " + e.message
+    redirect_to checkout_path
   end
 end
