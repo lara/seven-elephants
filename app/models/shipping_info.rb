@@ -9,8 +9,8 @@ class ShippingInfo
     :address_2,
   )
 
-  validates :customer_name, presence: true
-  validates :customer_phone_number, presence: true
+  validates :customer_name, presence: true, length: { maximum: 100 }
+  validates :customer_phone_number, presence: true, format: /\d+/
   validates :place_id, presence: true
 
   def confirm

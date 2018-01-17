@@ -12,10 +12,6 @@ class Order < ApplicationRecord
   alias_attribute :cancelled?, :cancelled_at?
 
   with_options presence: true, if: :placed? do
-    validates :customer_name, length: { maximum: 22 }
-    validates :customer_phone_number, format: /\d+/
-    validates :place_id
-    validates :address
     validates :shipping_method
     validates :tracking_number, if: :shipped?
   end
