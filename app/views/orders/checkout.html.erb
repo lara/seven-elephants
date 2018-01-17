@@ -8,7 +8,7 @@
       <dt>Address</dt>
       <dd><%= @order.address %></dd>
       <dt>Phone Number</dt>
-      <dd><%= @order.customer_phone_number %></dd>
+      <dd><%= number_to_phone @order.customer_phone_number, area_code: true, raise: true %></dd>
       <dt>Shipping Method</dt>
       <dd><%= @order.shipping_method %>, <%= format_price @order.shipping_cost %></dd>
     </dl>
