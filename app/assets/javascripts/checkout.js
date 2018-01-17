@@ -2,8 +2,9 @@ var autocomplete
 
 function initAutocomplete () {
   autocomplete = new google.maps.places.Autocomplete(
-      (document.getElementById('autocomplete_address')),
-      {types: ['geocode']})
+    document.getElementById('autocomplete_address'),
+    { types: ['address'] }
+  )
 
   autocomplete.addListener('place_changed', fillInAddress)
 }
