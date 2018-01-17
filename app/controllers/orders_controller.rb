@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
 
   def shipping_rates_index
     @shipping_rates = shipping_rates
-  rescue ShippingRatesCalculator::PackageTooHeavyError, ActiveShipping::ResponseError
+  rescue ShippingRatesCalculator::PackageTooHeavyError
     @package_too_heavy = true
   end
 
