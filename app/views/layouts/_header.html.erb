@@ -1,19 +1,17 @@
 <header>
-  <div class="header-logo">
-    <%= link_to "seven elephants", root_path %>
-  </div>
-
-  <div class="search">
-    <%= form_tag root_path, method: :get do %>
-      <label for="search">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </label>
-      <input name="search_term" type="search" id="search">
-    <% end %>
-  </div>
-
-  <nav>
-    <ul>
+  <nav class="header-container">
+    <ul class=header-list>
+      <li class="header-logo">
+        <%= link_to "Seven-Elephants", root_path %>
+      </li>
+      <li class="search">
+        <%= form_tag root_path, method: :get do %>
+          <label for="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </label>
+          <input name="search_term" type="search" id="search">
+        <% end %>
+      </li>
       <li>
         <%= link_to cart_path, class: "header-button" do %>
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
