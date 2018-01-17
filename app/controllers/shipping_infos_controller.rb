@@ -5,9 +5,11 @@ class ShippingInfosController < ApplicationController
 
   def create
     @shipping_info = ShippingInfo.new(shipping_info_params)
-    @shipping_info.confirm
-
-    redirect_to shipping_method_path
+    if @shipping_info.confirm
+      redirect_to shipping_method_path
+    else
+      render :new
+    end
   end
 
   private

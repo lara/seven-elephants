@@ -24,7 +24,7 @@ class ShippingRatesCalculator
     else
       raise PackageTooHeavyError
     end
-    combined_rates.sort_by(&:price)
+    combined_rates.uniq(&:service_code).sort_by(&:price)
   end
 
   private
