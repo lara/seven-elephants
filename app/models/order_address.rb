@@ -11,14 +11,6 @@ class OrderAddress
     @spot.detect { |component| component["types"].include?("country") }["long_name"]
   end
 
-  def state
-    @spot.detect { |component| component["types"].include?("administrative_area_level_1") }["short_name"]
-  end
-
-  def city
-    @spot.detect { |component| component["types"].include?("locality") }["long_name"]
-  end
-
   def postal_code
     @spot.detect { |component| component["types"].include?("postal_code") }["long_name"]
   end

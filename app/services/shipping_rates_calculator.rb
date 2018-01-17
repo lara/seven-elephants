@@ -74,8 +74,6 @@ class ShippingRatesCalculator
   def destination
     ActiveShipping::Location.new(
       country: @shipment_address.country,
-      state: @shipment_address.state,
-      city: @shipment_address.city,
       postal_code: @shipment_address.postal_code,
     )
   end
