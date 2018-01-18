@@ -5,6 +5,8 @@ Seven Elephants is a Rails 5 E-Commerce web application.
 
 ![alt text](https://raw.githubusercontent.com/laraaydin/seven-elephants/master/screenshot1.png)
 ![alt text](https://raw.githubusercontent.com/laraaydin/seven-elephants/master/screenshot2.png)
+![alt text](https://raw.githubusercontent.com/laraaydin/seven-elephants/master/screenshot3.png)
+![alt text](https://raw.githubusercontent.com/laraaydin/seven-elephants/master/screenshot4.png)
 
 
 
