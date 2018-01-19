@@ -1,0 +1,943 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, /Users/laraaydin/.rvm/gems/ruby-2.4.0/gems/normalize-rails-4.1.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+
+
+
+*/
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
+/* line 21, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html {
+  height: 100%;
+}
+/* line 24, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body {
+  font: 20px 'Muli', sans-serif;
+  line-height: 2rem;
+  min-height: 100vh;
+  background-color: #21252b;
+  color: #f0f0f0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+/* line 34, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body:before, html body:after {
+  content: " ";
+  position: absolute;
+  display: block;
+}
+/* line 40, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body:before {
+  width: 200px;
+  height: 800px;
+  transform: rotate(25deg);
+  top: -200px;
+  left: -100px;
+  z-index: -1;
+  background-color: #282c34;
+}
+/* line 50, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body:after {
+  width: 200px;
+  height: 1000px;
+  transform: rotate(50deg);
+  top: -280px;
+  left: -50px;
+  z-index: -2;
+  background-color: #2c313a;
+}
+/* line 60, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body main {
+  padding: 0 2rem;
+  margin: 40px;
+}
+/* line 65, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body img {
+  border-radius: 5px;
+}
+/* line 69, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body h1, html body h2, html body h3 {
+  font-family: 'Muli';
+  font-weight: bold;
+}
+/* line 74, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body a {
+  color: #53adc6;
+  text-decoration: none;
+}
+/* line 79, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/application.scss */
+html body ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/buttons.scss */
+.button {
+  background-image: linear-gradient(#53adc6, #53adc6 85%, #53adc6);
+  display: block;
+  color: #fff;
+  background-color: #53adc6;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 32px;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+/* line 20, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/buttons.scss */
+input.button, .stripe-button-el {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/checkout.scss */
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  align-items: flex-start;
+}
+/* line 7, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/checkout.scss */
+.checkout .cart-empty {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/* line 14, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/checkout.scss */
+.checkout .stripe-button-el span {
+  background-image: linear-gradient(#53adc6, #53adc6 85%, #53adc6);
+  display: block;
+  color: #fff;
+  background-color: #53adc6;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 32px;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/* line 29, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/checkout.scss */
+.checkout .edit_order_product input[type="submit"] {
+  display: none;
+}
+/* line 34, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/checkout.scss */
+.checkout .order-confirmation {
+  justify-content: center;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/flashes.scss */
+.flash {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #53adc6;
+  line-height: 3em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  animation: poof 1.6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+}
+
+/* line 18, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/flashes.scss */
+.alert-error {
+  background-color: #c65353;
+  animation-duration: 2s;
+}
+
+@keyframes poof {
+  from {
+    transform: translateY(-100%);
+  }
+  10%, 75% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin: 0 40px;
+}
+/* line 6, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .header-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: space-between;
+}
+/* line 13, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container a {
+  text-decoration: none;
+}
+/* line 17, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .header-logo {
+  font: 2.5rem 'Pacifico';
+  flex: 1;
+}
+/* line 22, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .search {
+  padding: 2rem;
+}
+/* line 25, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .search input {
+  width: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  bottom: 5px;
+  outline: 0;
+  color: #f0f0f0;
+  border-bottom: .1rem solid #53adc6;
+  transition: all 0.5s ease;
+  padding: 1px 0;
+}
+/* line 38, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .search input:focus {
+  width: 200px;
+  padding: 1px;
+}
+/* line 44, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .fa {
+  font-size: 2rem;
+  color: #53adc6;
+}
+/* line 49, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/header.scss */
+.header-container .number-of-items {
+  padding: 0.25rem;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column {
+  display: inline-block;
+  flex: 2;
+  margin-right: 200px;
+}
+/* line 6, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column p {
+  margin-top: 0;
+}
+/* line 10, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column table {
+  width: 100%;
+}
+/* line 14, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column th, .order-column td {
+  padding: 15px 0px 15px 0px;
+}
+/* line 18, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column th {
+  font-size: 1.5rem;
+}
+/* line 22, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column .shipping-rate {
+  padding: 15px 10px 15px 10px;
+}
+/* line 26, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column .error-list {
+  padding-left: 20px;
+}
+/* line 30, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column .error {
+  padding: 0;
+  list-style-type: disc;
+  color: #c65353;
+  font-size: 1rem;
+}
+/* line 37, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column dt {
+  float: left;
+  clear: left;
+  min-width: 200px;
+  text-align: left;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 46, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column dt::after {
+  content: ":";
+}
+/* line 50, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column dd {
+  margin: 0 0 0 150px;
+}
+/* line 54, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column dd, .order-column dt {
+  padding: 0px 20px 20px 0px;
+}
+/* line 58, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-column.scss */
+.order-column input[type="text"] {
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
+  border: 1px solid #bbb;
+  border-top-color: #999;
+  padding: 5px 12px 5px 12px;
+  margin-bottom: 15px;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-summary.scss */
+.order-summary {
+  flex: 1;
+  text-align: justify;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  color: black;
+}
+/* line 10, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-summary.scss */
+.order-summary h3 {
+  border-bottom: 2px solid #e6e6e6;
+  margin-top: 0;
+}
+/* line 15, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-summary.scss */
+.order-summary .order-total {
+  float: right;
+}
+/* line 19, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/order-summary.scss */
+.order-summary #error_explanation {
+  color: #c65353;
+}
+/* line 3, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-images.scss */
+.product-images {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2em;
+  align-items: flex-start;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px 0px 20px 10px;
+}
+/* line 14, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-images.scss */
+.product-images .product-images-full {
+  margin-right: 2em;
+}
+/* line 17, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-images.scss */
+.product-images .product-images-full img {
+  background-position: center center;
+  background-size: cover;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14), 0 10px 20px rgba(0, 21, 64, 0.05);
+}
+/* line 27, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-images.scss */
+.product-images .product-image-thumbnails {
+  position: sticky;
+  top: 50px;
+}
+/* line 31, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-images.scss */
+.product-images .product-image-thumbnails img {
+  background-position: center center;
+  background-size: cover;
+  max-width: 50px;
+  height: 50px;
+  box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14), 0 10px 20px rgba(0, 21, 64, 0.05);
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info {
+  align-items: center;
+  position: sticky;
+  top: 50px;
+}
+/* line 6, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info h2 {
+  margin: 0;
+}
+/* line 10, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info .description, .product-info .price, .product-info .dimensions, .product-info .weight {
+  display: block;
+}
+/* line 14, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info .description {
+  line-height: 2.5;
+  font-size: 0.9rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 20px;
+}
+/* line 21, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info .price {
+  color: #fff;
+}
+/* line 25, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info .select-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* line 33, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/product-info.scss */
+.product-info .button {
+  width: 50%;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products-show.scss */
+.products-show {
+  display: flex;
+  text-align: justify;
+  align-items: flex-start;
+}
+/* line 6, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products-show.scss */
+.products-show .product-images, .products-show .product-info {
+  flex: 1;
+  width: 0;
+}
+/* line 4, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
+.products-index .products-index-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+/* line 16, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
+.products-index .products-index-grid .product {
+  position: relative;
+  display: block;
+  padding: 1em;
+  color: black;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+/* line 24, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
+.products-index .products-index-grid .product img {
+  width: 200px;
+  height: auto;
+  box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14), 0 10px 20px rgba(0, 21, 64, 0.05);
+}
+/* line 30, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
+.products-index .products-index-grid .product .product-name {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+/* line 36, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
+.products-index .products-index-grid .product .product-price {
+  position: absolute;
+  bottom: 20px;
+  margin: 0;
+  right: 20px;
+  line-height: 1;
+  font-size: 1rem;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/quantity-selector.scss */
+select {
+  color: #53adc6;
+  position: relative;
+  bottom: 4px;
+  -webkit-appearance: none;
+  background: none;
+  height: 30px;
+  width: 50px;
+  border: none;
+  border-bottom: solid 2px #53adc6;
+  border-radius: 0;
+  outline: none;
+  padding: 0 4px;
+}
+
+/* line 16, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/quantity-selector.scss */
+.fa-angle-down {
+  color: #53adc6;
+  position: relative;
+  bottom: 4px;
+  right: 25px;
+  pointer-events: none;
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/remove-icon.scss */
+.remove-icon {
+  padding: 10px;
+}
+/* line 4, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/remove-icon.scss */
+.remove-icon :hover {
+  animation: dance 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier();
+}
+
+@keyframes dance {
+  25%, 75% {
+    transform: rotate(15deg);
+  }
+  50%, 100% {
+    transform: rotate(-15deg);
+  }
+}
+/* line 1, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/shipping.scss */
+.shipping-info {
+  display: inline-block;
+  flex: 2;
+  margin-right: 200px;
+}
