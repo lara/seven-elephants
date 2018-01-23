@@ -26,5 +26,4 @@ Rails.application.routes.draw do
   resources :order_products, only: %i[create update destroy]
   resources :products, only: %i[index show]
   resources :charges
-  resources :static_pages, only: :index
 end
