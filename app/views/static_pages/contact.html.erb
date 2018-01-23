@@ -1,0 +1,19 @@
+<div class="contact">
+  <ul class="error-list">
+    <% @inquiry.errors.full_messages.each do |message| %>
+      <li class="error"><%= message %></li>
+    <% end %>
+  </ul>
+  <%= form_for @inquiry, url: contact_path, method: :post do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name, required: true %>
+
+    <%= f.label :email_address, "E-mail Address:" %>
+    <%= f.text_field :email_address, required: true %>
+
+    <%= f.label :content, "Inquiry:" %>
+    <%= f.text_area :content, required: true %>
+
+    <%= f.submit "Send", class: "button" %>
+  <% end %>
+</div>

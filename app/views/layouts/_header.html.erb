@@ -1,6 +1,6 @@
 <header>
   <nav class="header-container">
-    <ul class=header-list>
+    <ul class="header-list">
       <li class="header-logo">
         <%= link_to "SevenElephants", root_path %>
       </li>
@@ -18,6 +18,12 @@
           <span class="number-of-items"><%= @order.number_of_items %></span>
         <% end %>
       </li>
+    </ul>
+
+    <ul class="header-navigation-list">
+      <li class="header-navigation-item"><%= link_to "Home", root_path %></li>
+      <li class="header-navigation-item"><%= link_to "About", about_path %></li>
+      <li class="header-navigation-item"><%= link_to "Contact Us", contact_path %></li>
     </ul>
   </nav>
 </header>

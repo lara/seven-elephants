@@ -51,4 +51,20 @@
     font-size: 0.95rem;
     text-decoration: underline;
   }
+
+  .header-navigation-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(45, 49, 57);
+    margin-top: 0;
+    margin-left: 140px;
+    padding-right: 140px;
+
+    .header-navigation-item {
+      font-size: 25px;
+      font-weight: bold;
+      padding: 0 60px 15px 60px;
+    }
+  }
 }
