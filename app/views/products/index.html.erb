@@ -2,9 +2,11 @@
   <ul class="products-index-grid">
     <% @products.each do |product| %>
       <li class="product">
-        <%= image_tag product.images[0].url %>
-        <p class="product-name"><%= link_to product.name, product %></p>
-        <p class="product-price"><%= format_price product.price %></p>
+        <%= link_to product do %>
+          <%= image_tag product.images[0].url %>
+          <p class="product-name"><%= product.name %></p>
+          <p class="product-price"><%= format_price product.price %></p>
+        <% end %>
       </li>
     <% end %>
   </ul>
