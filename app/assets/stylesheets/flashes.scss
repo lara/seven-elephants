@@ -9,7 +9,7 @@
   width: 100%;
   pointer-events: none;
 
-  animation: poof 1.6s;
+  animation: poof 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier();
@@ -17,7 +17,6 @@
 
 .alert-error {
   background-color: #c65353;
-  animation-duration: 2s;
 }
 
 @keyframes poof {
