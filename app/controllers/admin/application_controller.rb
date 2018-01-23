@@ -1,7 +1,8 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_admin
-    http_basic_authenticate_with name: ENV.fetch("HTTP_AUTHENTICATION_NAME"), password: ENV.fetch("HTTP_AUTHENTICATION_PASSWORD")
+    http_basic_authenticate_with name: ENV.fetch("HTTP_AUTHENTICATION_NAME"),
+                                 password: ENV.fetch("HTTP_AUTHENTICATION_PASSWORD")
 
     def authenticate_admin; end
 
