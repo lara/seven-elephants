@@ -10,16 +10,16 @@
       </ul>
     <% end %>
     <%= f.label :customer_name, "Name:" %>
-    <%= f.text_field :customer_name, required: true %>
+    <%= f.text_field :customer_name, required: true, placeholder: "Required" %>
 
     <%= f.label :customer_phone_number, "Phone Number:" %>
-    <%= f.text_field :customer_phone_number, required: true %>
+    <%= f.text_field :customer_phone_number, required: true, placeholder: "Required" %>
 
     <%= label_tag :autocomplete_address, "Address:" %>
     <%= text_field_tag :autocomplete_address, nil, required: true %>
 
     <%= label_tag :address_2, "Apt./Suite:" %>
-    <%= text_field_tag :address_2, nil %>
+    <%= text_field_tag :address_2 %>
 
     <%= f.hidden_field :place_id, id: "place_id" %>
   </div>
