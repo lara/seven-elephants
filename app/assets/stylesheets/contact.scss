@@ -3,6 +3,14 @@
   justify-content: center;
   margin: 0 auto;
 
+  h2 {
+    color: lightskyblue;
+  }
+
+  p {
+    color: khaki;
+  }
+
   input[type="text"], textarea {
     display: block;
     box-sizing: border-box;

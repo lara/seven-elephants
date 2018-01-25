@@ -1,13 +1,13 @@
 .flash {
   text-align: center;
   font-weight: bold;
-  font-size: 1.5em;
   background-color: #53adc6;
   line-height: 3em;
   position: absolute;
-  top: 0;
-  width: 100%;
-  pointer-events: none;
+  top: 100%;
+  left: 50%;
+  width: 35%;
+  border-radius: 0 0 30px 30px;
 
   animation: poof 2s;
   animation-fill-mode: forwards;
@@ -21,14 +21,14 @@
 
 @keyframes poof {
   from {
-    transform: translateY(-100%)
+    transform: translateY(-100%) translateX(-50%);
   }
 
   10%, 75% {
-    transform: translateY(0);
+    transform: translateY(0) translateX(-50%);
   }
 
   to {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateX(-50%);
   }
 }

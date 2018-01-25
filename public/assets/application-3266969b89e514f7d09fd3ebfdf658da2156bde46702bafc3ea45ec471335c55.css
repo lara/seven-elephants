@@ -470,7 +470,7 @@ html body {
   line-height: 2rem;
   min-height: 100vh;
   background-color: #21252b;
-  color: #f0f0f0;
+  color: #fff;
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: 0;
@@ -649,7 +649,7 @@ input.button, .stripe-button-el {
   position: relative;
   bottom: 5px;
   outline: 0;
-  color: #f0f0f0;
+  color: #fff;
   border-bottom: .1rem solid #53adc6;
   transition: all 0.5s ease;
   padding: 1px 0;
@@ -869,7 +869,7 @@ input.button, .stripe-button-el {
   padding: 1em;
   color: black;
   border-radius: 5px;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 /* line 24, /Users/laraaydin/Projects/seven-elephants/app/assets/stylesheets/products_index.scss */
 .products-index .products-index-grid .product img {

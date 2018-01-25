@@ -1,3 +1,8 @@
+$box-shadow: inset 0 4px 7px 1px rgb(132, 208, 230),
+             inset 0 -5px 20px rgba(83,173,198,.25),
+             0 2px 6px rgba(0, 21, 64, 0.5),
+             0 10px 20px rgba(0, 21, 64, 0.3);
+
 .button {
   background-image: linear-gradient(#53adc6,#53adc6 85%,#53adc6);
   display: block;
@@ -8,9 +13,11 @@
   padding: 5px 32px;
   border: 0;
   border-radius: 5px;
+  box-shadow: $box-shadow;
   text-align: center;
   letter-spacing: 0.05rem;
   margin-top: 32px;
+  transition: all 0.2s;
 }
 
 // Links
@@ -21,4 +28,12 @@ a.button {
 input.button, .stripe-button-el {
   width: 100%;
   box-sizing: border-box;
+}
+
+.button:hover {
+  transform: scale(1.01);
+  box-shadow: inset 0 4px 7px 1px rgb(132, 208, 230),
+              inset 0 -5px 20px rgba(83,173,198,.25),
+              0 2px 6px rgba(0, 21, 64, 0.6),
+              0 10px 20px rgba(0, 21, 64, 0.4);
 }

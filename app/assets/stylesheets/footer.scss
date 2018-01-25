@@ -1,9 +1,9 @@
 footer {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.6);
-  margin: 0px 72px 37px 72px;
+  margin: 120px 72px 0px 72px;
   border-top: 2px solid rgb(45, 49, 57);
-  padding-top: 18px;
+  padding: 18px 0;
 
   .first-footer-container{
     display: flex;
@@ -19,7 +19,7 @@ footer {
       font-size: 1.5rem;
 
       .fa-instagram, .fa-facebook-square {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #fff;
         border-radius: 36px;
         padding: 12px;
         margin: 5px;
@@ -33,7 +33,7 @@ footer {
         color: rgb(213, 60, 138);
       }
     }
-    
+
     p {
       margin: 0;
     }
