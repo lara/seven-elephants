@@ -1,29 +1,32 @@
 <header>
-  <nav class="header-container">
-    <ul class="header-list">
-      <li class="header-logo">
-        <%= link_to "SevenElephants", root_path %>
-      </li>
-      <li class="search">
-        <%= form_tag root_path, method: :get do %>
-          <label for="search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </label>
-          <input name="search_term" type="search" id="search">
-        <% end %>
-      </li>
-      <li>
-        <%= link_to cart_path, class: "header-button" do %>
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          <span class="number-of-items"><%= @order.number_of_items %></span>
-        <% end %>
-      </li>
-    </ul>
-
-    <ul class="header-navigation-list">
-      <li class="header-navigation-item"><%= link_to "Home", root_path %></li>
-      <li class="header-navigation-item"><%= link_to "About", about_path %></li>
-      <li class="header-navigation-item"><%= link_to "Contact Us", contact_path %></li>
-    </ul>
-  </nav>
+  <% flash.each do |message_type, message| %>
+    <div class="flash alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <div class="header-container">
+    <h1 class="header-logo">
+      <%= link_to "SevenElephants", root_path %>
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to "About", about_path %>
+        </li>
+        <li>
+          <%= link_to "Contact Us", contact_path %>
+        </li>
+        <li>
+          <%= link_to cart_path, class: "header-button" do %>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span class="number-of-items"><%= @order.number_of_items %></span>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-bar">
+    <%= form_tag root_path, method: :get do %>
+      <label for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+      <input name="search_term" type="search" id="search" placeholder="Search">
+    <% end %>
+  </div>
 </header>
