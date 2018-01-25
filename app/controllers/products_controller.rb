@@ -2,10 +2,7 @@ class ProductsController < ApplicationController
   def index
     @products =
       if params[:search_term]
-        Product.search do
-          fulltext params[:search_term]
-          spellcheck count: 3
-        end.results
+        Product.fuzzy_search(params[:search_term])
       else
         Product.all.order(created_at: :asc)
       end

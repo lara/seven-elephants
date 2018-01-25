@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112230611) do
+ActiveRecord::Schema.define(version: 20180124193813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
+  enable_extension "pg_trgm"
 
   create_table "order_products", force: :cascade do |t|
     t.integer "quantity", null: false

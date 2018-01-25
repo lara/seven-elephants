@@ -21,6 +21,7 @@ gem "normalize-rails"
 gem "sass-rails", "~> 5.0"
 gem "sidekiq"
 gem "stripe"
+gem 'textacular', '~> 5.0'
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
