@@ -12,7 +12,7 @@ class Inquiry
 
   def deliver
     if valid?
-      InquiryMailer.new_inquiry_email(self).deliver_now
+      # InquiryMailer.new_inquiry_email(self).deliver_now
     else
       false
     end
