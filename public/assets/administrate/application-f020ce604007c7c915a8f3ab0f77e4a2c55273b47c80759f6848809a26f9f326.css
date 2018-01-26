@@ -771,7 +771,7 @@ template {
   content: ' ';
   display: block;
   position: absolute;
-  background: #fff;
+  background: #f0f0f0;
   height: 1px;
   bottom: 0;
   left: 0;
