@@ -21,7 +21,7 @@ class ChargesController < ApplicationController
       order_product.product.save
     end
 
-    # OrderMailer.order_placed_email(@order).deliver_now
+    OrderMailer.order_placed_email(@order).deliver_now
     @placed_order = @order
     expire_shopping_cart
     set_shopping_cart
