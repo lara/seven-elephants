@@ -5,7 +5,7 @@ class InquiryMailer < ApplicationMailer
   def new_inquiry_email(inquiry)
     @inquiry = inquiry
     mail(
-      from: INFO_EMAIL,
+      from: "<#{inquiry.name}> #{INFO_EMAIL}",
       reply_to: inquiry.email_address,
       subject: "[SEVEN ELEPHANTS] Customer Inquiry",
       to: MUKO_EMAIL,
