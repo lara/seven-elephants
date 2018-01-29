@@ -1,5 +1,5 @@
 class OrderMailer < ApplicationMailer
-  default from: "orders@seven-elephants.co"
+  default from: ENV.fetch("INFO_EMAIL")
 
   def order_placed_email(order)
     @order = order
