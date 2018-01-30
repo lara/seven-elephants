@@ -1,6 +1,7 @@
 $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
 
 .product-images {
+  order: 2;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -19,7 +20,8 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
       background-position: center center;
       background-size: cover;
       max-width: 500px;
-      height: 500px;
+      width: 100%;
+      height: auto;
       border-radius: 20px;
       box-shadow: $box-shadow;
     }
@@ -32,7 +34,8 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
       background-position: center center;
       background-size: cover;
       max-width: 50px;
-      height: 50px;
+      width: 100%;
+      height: auto;
       cursor: pointer;
       box-shadow: $box-shadow;
       transition: transform 200ms;
@@ -43,6 +46,16 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
     img:hover {
       transform: scale(1.15);
     }
+
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .product-images {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 600px;
+    padding: 15px 5px 10px 15px;
 
   }
 }

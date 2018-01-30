@@ -14,7 +14,11 @@ header {
     z-index: 1;
     position: relative;
 
-    h1, nav {
+    h1 {
+      flex-grow: 2;
+    }
+
+    nav {
       flex-grow: 1;
     }
 
@@ -41,13 +45,10 @@ header {
         display: block;
         text-align: center;
         padding: 15px 0;
-        font-size: 1.5rem;
         font-weight: bold;
 
         .number-of-items {
           padding: 0.25rem;
-          font-size: 0.95rem;
-          text-decoration: underline;
         }
       }
     }
@@ -58,8 +59,8 @@ header {
     position: absolute;
     display: inline-block;
     top: 100%;
-    right: 70px;
-    border-radius: 0 0 40px 40px;
+    right: 50px;
+    border-radius: 0 0 30px 30px;
     padding: 10px 20px;
     z-index: 0;
     box-shadow: $box-shadow;
@@ -84,7 +85,75 @@ header {
   }
 
   .fa {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #53adc6;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    margin-bottom: 80px;
+    .header-container {
+      display: block;
+      padding: 0;
+
+      .header-logo {
+        display: block;
+        text-align: center;
+        font: 1.8rem 'Pacifico';
+        bottom: 0;
+        padding: 5px 0;
+      }
+
+      nav ul {
+        padding: 5px 0;
+        a {
+          padding: 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .search-bar {
+      padding: 7.5px 10px;
+
+      .fa {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  header {
+    margin-bottom: 80px;
+    .header-container {
+      display: block;
+      padding: 0;
+
+      .header-logo {
+        display: block;
+        text-align: center;
+        font: 2rem 'Pacifico';
+        bottom: 0;
+        padding: 5px 0;
+      }
+
+      nav ul {
+        padding: 5px 0;
+        a {
+          padding: 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .search-bar {
+      padding: 7.5px 10px;
+
+      .fa {
+        font-size: 1.2rem;
+      }
+    }
   }
 }

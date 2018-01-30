@@ -1,4 +1,14 @@
 <div class="products-show">
+  <div class="product-images">
+    <div class="product-images-full">
+      <%= image_tag @product.images.first.url %>
+    </div>
+    <div class="product-image-thumbnails">
+      <% @product.images.each do |image| %>
+        <%= image_tag image.url %>
+      <% end %>
+    </div>
+  </div>
   <div class="product-info">
     <h2><%= @product.name %></h2>
     <p class="description">
@@ -20,17 +30,6 @@
           <%= f.hidden_field :product_id %>
           <%= f.submit "Add to Shopping Cart", class: "button" %>
         <% end %>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="product-images">
-    <div class="product-images-full">
-      <%= image_tag @product.images.first.url %>
-    </div>
-    <div class="product-image-thumbnails">
-      <% @product.images.each do |image| %>
-        <%= image_tag image.url %>
       <% end %>
     </div>
   </div>

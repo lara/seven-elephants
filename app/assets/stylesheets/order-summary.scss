@@ -1,11 +1,11 @@
 .order-summary {
-  flex: 1;
   text-align: justify;
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
   color: black;
+  flex-basis: 350px;
 
   h3 {
     border-bottom: 2px solid rgb(230, 230, 230);
@@ -18,5 +18,11 @@
 
   #error_explanation {
     color: #c65353;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .order-summary {
+    margin: 0 auto;
   }
 }

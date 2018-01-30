@@ -6,13 +6,14 @@
   <% else %>
     <div class="order-column">
       <table>
-        <tr>
-          <th colspan="2" width="50%">Product</th>
-          <th width="15%">Each</th>
-          <th width="20%">Quantity</th>
-          <th class="item-total" width="15%">Total</th>
-        </tr>
-
+        <thead>
+          <tr>
+            <th colspan="2" width="50%">Product</th>
+            <th width="15%">Each</th>
+            <th width="20%">Quantity</th>
+            <th class="item-total" width="15%">Total</th>
+          </tr>
+        </thead>
         <% @order_products_with_product.each do |order_product| %>
         <tr>
           <td colspan="2">

@@ -33,3 +33,9 @@
     width: 50%;
   }
 }
+
+@media only screen and (max-width: 960px) {
+  .product-info .button {
+    width: 100%
+  }
+}

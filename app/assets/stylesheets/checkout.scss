@@ -35,3 +35,25 @@
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 960px) {
+  .checkout {
+    display: block;
+
+    thead {
+      font-size: 0.8rem;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+
+  .order-summary {
+    width: 350px;
+    display: block;
+  }
+}
