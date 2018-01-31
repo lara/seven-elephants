@@ -6,7 +6,7 @@ header {
 
   .header-container {
     background-color: #fff;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 20px 20px;
     display: flex;
     align-items: center;
     padding: 10px 0px 5px 77.5px;
@@ -15,7 +15,7 @@ header {
     position: relative;
 
     h1 {
-      flex-grow: 2;
+      flex-grow: 3;
     }
 
     nav {
@@ -60,7 +60,7 @@ header {
     display: inline-block;
     top: 100%;
     right: 50px;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 40px 40px;
     padding: 10px 20px;
     z-index: 0;
     box-shadow: $box-shadow;
@@ -116,6 +116,8 @@ header {
 
     .search-bar {
       padding: 7.5px 10px;
+      border-radius: 0 0 20px 20px;
+      right: 9%;
 
       .fa {
         font-size: 1.2rem;
@@ -150,6 +152,8 @@ header {
 
     .search-bar {
       padding: 7.5px 10px;
+      border-radius: 0 0 20px 20px;
+      right: 15%;
 
       .fa {
         font-size: 1.2rem;

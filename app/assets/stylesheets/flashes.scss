@@ -7,7 +7,7 @@
   top: 100%;
   left: 50%;
   width: 35%;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 20px 20px;
 
   animation: poof 2s;
   animation-fill-mode: forwards;
@@ -30,5 +30,29 @@
 
   to {
     transform: translateY(-100%) translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .flash {
+    padding: 15px 20px;
+    line-height: normal;
+    left: 9%;
+    width: 45%;
+    font-size: 0.9rem;
+  }
+
+  @keyframes poof {
+    from {
+      transform: translateY(-100%);
+    }
+
+    10%, 75% {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-100%);
+    }
   }
 }

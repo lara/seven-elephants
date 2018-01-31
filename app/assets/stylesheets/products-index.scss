@@ -3,7 +3,7 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
 .products-index {
   .products-index-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     grid-auto-rows: minmax(100px, auto);
     grid-gap: 20px;
     max-width: 940px;
@@ -20,7 +20,7 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
       position: relative;
       display: block;
       color: black;
-      border-radius: 30px;
+      border-radius: 20px;
       background-color: #fff;
       transition: opacity 200ms;
 
@@ -55,6 +55,14 @@ $box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 
         line-height: 1;
         font-size: 1rem;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .products-index {
+    .products-index-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 }

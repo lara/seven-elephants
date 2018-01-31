@@ -8,18 +8,18 @@
       <table>
         <thead>
           <tr>
-            <th colspan="2" width="50%">Product</th>
-            <th width="15%">Each</th>
-            <th width="20%">Quantity</th>
-            <th class="item-total" width="15%">Total</th>
+            <th class="product">Product</th>
+            <th class="each-price">Each</th>
+            <th class="quantity">Quantity</th>
+            <th class="item-total">Total</th>
           </tr>
         </thead>
         <% @order_products_with_product.each do |order_product| %>
         <tr>
-          <td colspan="2">
+          <td class="product">
             <%= link_to order_product.product.name, order_product.product %>
           </td>
-          <td>
+          <td class="each-price">
             <%= format_price order_product.price %>
           </td>
           <td class="quantity">

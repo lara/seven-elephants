@@ -35,7 +35,7 @@
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-name="Seven Elephants"
-              data-description="<%= @order.number_of_items %> items (<%= format_price @order.subtotal %> + shipping)"
+              data-description="<%= @order.number_of_items %> item(s) (<%= format_price @order.subtotal %> + shipping)"
               data-amount="<%= @order.total %>"
               data-locale="auto"
               data-label="Checkout with Stripe">
