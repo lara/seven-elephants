@@ -65,22 +65,43 @@ header {
     z-index: 0;
     box-shadow: $box-shadow;
 
+    label {
+      pointer-events: none;
+    }
+
     input {
-      width: 0;
       background-color: transparent;
       border: none;
       position: relative;
-      bottom: 5px;
+      bottom: 2px;
       outline: 0;
       color: black;
-      border-bottom: .1rem solid #53adc6;
+      border-bottom: .1rem solid;
       transition: all 0.5s ease;
       padding: 1px 0;
+
+      -webkit-tap-highlight-color: none;
+      -webkit-appearance: none;
+
+      appearance: none;
+      width: 0;
+      margin-left: -25px;
+      padding-left: 15px;
+      border-bottom-color: transparent;
     }
 
     input:focus {
       width: 200px;
       padding: 1px;
+      margin-left: 0;
+      padding-left: 0;
+      border-bottom-color: #53adc6;
+      border-radius: 0px !important;
+
+    }
+
+    i.fa {
+      pointer-events: none;
     }
   }
 
