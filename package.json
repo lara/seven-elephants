@@ -1,0 +1,13 @@
+{
+  "name": "seven-elephants",
+  "version": "1.0.0",
+  "description": "Seven Elephants is a Rails 5 E-Commerce web application.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": "git@github.com:laraaydin/seven-elephants.git",
+  "keywords": [],
+  "author": "Lara Aydin",
+  "license": "UNLICENSED",
+  "private": true
+}
