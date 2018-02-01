@@ -10,6 +10,7 @@ gem "active_shipping"
 gem "administrate"
 gem "administrate-field-carrierwave", "~> 0.2.0"
 gem "aws-ses", "~> 0.6.0", require: "aws/ses"
+gem "babel-transpiler"
 gem "carrierwave", "~> 1.0"
 gem "coffee-rails", "~> 4.2"
 gem "easy-box-packer"
@@ -21,7 +22,7 @@ gem "normalize-rails"
 gem "sass-rails", "~> 5.0"
 gem "sidekiq"
 gem "stripe"
-gem 'textacular', '~> 5.0'
+gem "textacular", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
