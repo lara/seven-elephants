@@ -24,6 +24,8 @@ gem "sidekiq"
 gem "stripe"
 gem "textacular", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
+gem "unicorn", "~> 5.1"
+gem "unicorn-rails"
 
 group :development, :test do
   gem "byebug"
